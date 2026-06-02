@@ -212,6 +212,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a:hover { color: var(--ember-bright); }
 .nav-links a.nav-firefighting { color: #D9362B; }
 .nav-links a.nav-firefighting:hover { color: #FF6B5A; }
+.nav-links a.nav-cleaning { color: var(--gold); }
+.nav-links a.nav-cleaning:hover { color: #F5C969; }
 
 .nav-cta {
   display: inline-block;
@@ -285,6 +287,8 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu a:hover { color: var(--ember-bright); }
 .mobile-menu a.nav-firefighting { color: #D9362B; }
 .mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
+.mobile-menu a.nav-cleaning { color: var(--gold); }
+.mobile-menu a.nav-cleaning:hover { color: #F5C969; }
 
 .mobile-menu .nav-cta {
   display: inline-block;
@@ -1132,16 +1136,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  max-width: 640px;
-  margin: 32px auto 0;
-  padding: 14px 32px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 16px 24px;
   background: #25D366;
   color: var(--white);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.06em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 4px;
+  box-sizing: border-box;
   transition: background var(--transition-interactive), transform var(--transition-interactive);
 }
 
@@ -1312,7 +1318,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="/">Cleaning</a></li>
+      <li><a href="/" class="nav-cleaning">Cleaning</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
       <li><a href="#technology">Technology</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
@@ -1325,7 +1331,7 @@ h1, h2, h3, h4, h5, h6 {
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/" onclick="closeMobile()">Cleaning</a>
+  <a href="/" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
   <a href="#technology" onclick="closeMobile()">Technology</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
