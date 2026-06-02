@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -113,11 +113,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-heading .gold { color: var(--gold); }
 .section-heading .ember { color: var(--ember-bright); }
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-dim);
+  max-width: 720px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
 .gold-text { color: var(--gold); }
 .ember-text { color: var(--ember-bright); }
 
 .mono {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 11px;
@@ -202,7 +210,8 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 .nav-links a:hover { color: var(--ember-bright); }
-.nav-links a.active { color: var(--ember-bright); }
+.nav-links a.nav-firefighting { color: #D9362B; }
+.nav-links a.nav-firefighting:hover { color: #FF6B5A; }
 
 .nav-cta {
   display: inline-block;
@@ -274,6 +283,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-menu a:hover { color: var(--ember-bright); }
+.mobile-menu a.nav-firefighting { color: #D9362B; }
+.mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
 
 .mobile-menu .nav-cta {
   display: inline-block;
@@ -340,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-breadcrumb {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -470,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -554,7 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 .pillar-card:hover::before { height: 100%; }
 
 .pillar-tag {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.22em;
   color: var(--ember-bright);
@@ -634,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scenario-meta-tag {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -675,7 +686,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .challenge-card .mono-number {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.22em;
   color: var(--text-dim);
@@ -727,7 +738,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.22em;
   color: var(--text-dim);
@@ -843,7 +854,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(217, 54, 43, 0.12);
   border: 1px solid rgba(217, 54, 43, 0.3);
   color: var(--ember-bright);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -935,7 +946,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .comparison-table tbody td:first-child {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1016,7 +1027,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-method:hover { border-color: var(--ember); }
 
 .contact-method-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1047,7 +1058,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group.full-width { grid-column: 1 / -1; }
 
 .form-group label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1117,21 +1128,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .whatsapp-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 14px 28px;
+  max-width: 640px;
+  margin: 32px auto 0;
+  padding: 14px 32px;
   background: #25D366;
   color: var(--white);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 13px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 4px;
-  margin: 32px auto 0;
-  max-width: 320px;
-  transition: all var(--transition-interactive);
+  transition: background var(--transition-interactive), transform var(--transition-interactive);
 }
 
 .whatsapp-btn:hover {
@@ -1169,7 +1180,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.7; max-width: 340px; }
 
 .footer-col h4 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1199,7 +1210,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-bottom p {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--text-dim);
@@ -1275,8 +1286,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   .comparison-table tbody td { border-bottom: none; padding: 6px 0; }
   .comparison-table tbody td:first-child { color: var(--ember-bright); margin-bottom: 6px; }
-  .comparison-table tbody td:nth-child(2)::before { content: 'Skyline RPAS: '; font-family: 'Courier New', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; }
-  .comparison-table tbody td:nth-child(3)::before { content: 'Trucks & Ladders: '; font-family: 'Courier New', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 6px; }
+  .comparison-table tbody td:nth-child(2)::before { content: 'Skyline RPAS: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; }
+  .comparison-table tbody td:nth-child(3)::before { content: 'Trucks & Ladders: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 6px; }
 }
 
 @media (max-width: 600px) {
@@ -1302,7 +1313,7 @@ h1, h2, h3, h4, h5, h6 {
     </a>
     <ul class="nav-links">
       <li><a href="/">Cleaning</a></li>
-      <li><a href="/firefighting.html" class="active">Firefighting</a></li>
+      <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
       <li><a href="#technology">Technology</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#contact" class="nav-cta">Capability Briefing</a></li>
@@ -1315,7 +1326,7 @@ h1, h2, h3, h4, h5, h6 {
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="closeMobile()">Cleaning</a>
-  <a href="/firefighting.html" onclick="closeMobile()">Firefighting</a>
+  <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
   <a href="#technology" onclick="closeMobile()">Technology</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="#contact" class="nav-cta" onclick="closeMobile()">Capability Briefing</a>
@@ -1328,7 +1339,7 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-breadcrumb fade-in">// Firefighting RPAS Division &middot; Manila &middot; 2026</p>
+    <p class="hero-breadcrumb fade-in">Firefighting RPAS Division</p>
     <h1 class="fade-in fade-in-delay-1">REACH. <span class="ember">RESPOND.</span> PROTECT.</h1>
     <p class="hero-subheadline fade-in fade-in-delay-2">REMOTELY PILOTED AERIAL FIRE RESPONSE FOR THE PHILIPPINES.</p>
     <p class="hero-subtitle fade-in fade-in-delay-3">
@@ -1367,7 +1378,7 @@ h1, h2, h3, h4, h5, h6 {
 <section class="who-we-are" id="about">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Who We Are</p>
+      <p class="section-label">Who We Are</p>
       <h2 class="section-heading">INTRODUCING <span class="ember">SKYLINE DRONES</span> — FIREFIGHTING RPAS DIVISION</h2>
     </div>
     <div class="who-grid">
@@ -1388,22 +1399,22 @@ h1, h2, h3, h4, h5, h6 {
 <section class="pillars">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// The Doctrine</p>
+      <p class="section-label">The Doctrine</p>
       <h2 class="section-heading">THREE OPERATIONAL <span class="ember">IMPERATIVES</span></h2>
     </div>
     <div class="pillars-grid">
       <div class="pillar-card fade-in">
-        <div class="pillar-tag">// 01 / Reach</div>
+        <div class="pillar-tag">Reach</div>
         <h3>Where Ladders Stop</h3>
         <p>Fire trucks and articulated platforms cap out at roughly 10 storeys. Our aerial system operates up to 160 metres — extending suppression and reconnaissance to the floors where modern Philippine high-rises actually burn.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-1">
-        <div class="pillar-tag">// 02 / Respond</div>
+        <div class="pillar-tag">Respond</div>
         <h3>In Conditions Trucks Can't</h3>
         <p>Narrow alleyways, blocked access roads, dense informal settlements, refineries with restricted ground approach, bridges over water — our drones fly the routes ground vehicles cannot navigate, day or night, in challenging visibility.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-2">
-        <div class="pillar-tag">// 03 / Protect</div>
+        <div class="pillar-tag">Protect</div>
         <h3>Lives No Policy Replaces</h3>
         <p>Zero firefighters at altitude. Zero civilians inside the structure during initial reconnaissance. Every minute we shorten the assessment phase is a minute returned to evacuation, containment, and life safety.</p>
       </div>
@@ -1415,7 +1426,7 @@ h1, h2, h3, h4, h5, h6 {
 <section class="scenarios" id="scenarios">
   <div class="container">
     <div class="scenarios-intro fade-in">
-      <p class="section-label">// Mission Profiles</p>
+      <p class="section-label">Mission Profiles</p>
       <h2 class="section-heading">EVERY FIRE <span class="ember">SCENARIO</span></h2>
       <p>From vertical residential towers to brushland ridge fires — one airframe family, configured for the mission. Each profile below maps to a documented response playbook integrated with BFP and LGU command protocols.</p>
     </div>
@@ -1423,56 +1434,56 @@ h1, h2, h3, h4, h5, h6 {
       <div class="scenario-tile fade-in">
         <img src="firefighting-scenario-highrise.jpg" alt="High-rise tower fire at night">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 01</div>
+          <div class="scenario-meta-tag">01</div>
           <h4>High-Rise Tower</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-1">
         <img src="firefighting-scenario-settlement.jpg" alt="Dense informal settlement at night">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 02</div>
+          <div class="scenario-meta-tag">02</div>
           <h4>Informal Settlement</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-2">
         <img src="firefighting-scenario-refinery.jpg" alt="Petrochemical refinery with flare stacks">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 03</div>
+          <div class="scenario-meta-tag">03</div>
           <h4>Refinery / Industrial</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-3">
         <img src="firefighting-scenario-warehouse.jpg" alt="Warehouse fire">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 04</div>
+          <div class="scenario-meta-tag">04</div>
           <h4>Warehouse &amp; Logistics</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in">
         <img src="firefighting-scenario-bridge.jpg" alt="Bridge fire at night">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 05</div>
+          <div class="scenario-meta-tag">05</div>
           <h4>Bridge &amp; Critical Infrastructure</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-1">
         <img src="firefighting-scenario-tanker.jpg" alt="Highway tanker incident">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 06</div>
+          <div class="scenario-meta-tag">06</div>
           <h4>Transport &amp; Tanker</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-2">
         <img src="firefighting-scenario-wildland.jpg" alt="Tropical wildland brushfire">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 07</div>
+          <div class="scenario-meta-tag">07</div>
           <h4>Wildland &amp; Brush</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-3">
         <img src="firefighting-scenario-stadium.jpg" alt="Stadium emergency at night">
         <div class="scenario-meta">
-          <div class="scenario-meta-tag">// 08</div>
+          <div class="scenario-meta-tag">08</div>
           <h4>Stadium &amp; Mass Gathering</h4>
         </div>
       </div>
@@ -1484,22 +1495,22 @@ h1, h2, h3, h4, h5, h6 {
 <section class="challenge">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// The Challenge</p>
+      <p class="section-label">The Challenge</p>
       <h2 class="section-heading">WHY THE PHILIPPINES NEEDS <span class="ember">AERIAL FIRE RESPONSE</span></h2>
     </div>
     <div class="challenge-grid">
       <div class="challenge-card fade-in">
-        <div class="mono-number">// Constraint 01</div>
+        <div class="mono-number">Constraint 01</div>
         <h3>The Vertical Limit</h3>
         <p>Conventional fire ladders in the Philippines top out at roughly 30 metres — about 10 storeys. Manila now has hundreds of residential and commercial towers above that line. When a fire breaks out on the 25th floor of a BGC tower, the ladder is a spectator.</p>
       </div>
       <div class="challenge-card fade-in fade-in-delay-1">
-        <div class="mono-number">// Constraint 02</div>
+        <div class="mono-number">Constraint 02</div>
         <h3>The Access Barrier</h3>
         <p>Tondo, Payatas, Quiapo, the riverside barangays — the country's most fire-vulnerable communities sit behind alleyways too narrow for any fire truck. By the time hoses are dragged in by hand, the fire has spread three structures over.</p>
       </div>
       <div class="challenge-card fade-in fade-in-delay-2">
-        <div class="mono-number">// Constraint 03</div>
+        <div class="mono-number">Constraint 03</div>
         <h3>The Risk Exposure</h3>
         <p>The Bureau of Fire Protection consistently ranks among the most dangerous occupations in the country. Every burning roof, every weakened staircase, every chemical container is a fatality risk. Aerial response moves those first minutes to a position where no human is exposed.</p>
       </div>
@@ -1511,43 +1522,43 @@ h1, h2, h3, h4, h5, h6 {
 <section class="technology" id="technology">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Platform Specifications</p>
+      <p class="section-label">Platform Specifications</p>
       <h2 class="section-heading">PURPOSE-BUILT <span class="ember">FIRE-RESPONSE</span> TECHNOLOGY</h2>
     </div>
     <div class="tech-grid">
       <div class="tech-card fade-in">
         <div class="tech-spec">160m</div>
-        <div class="tech-label">// Max Operating Altitude</div>
+        <div class="tech-label">Max Operating Altitude</div>
         <h3>Vertical Reach</h3>
         <p>Operates at heights that exceed every fire ladder deployed in the Philippines today — covering the full residential and commercial high-rise envelope of Metro Manila.</p>
       </div>
       <div class="tech-card fade-in fade-in-delay-1">
         <div class="tech-spec">Sustained</div>
-        <div class="tech-label">// On-Station Endurance</div>
+        <div class="tech-label">On-Station Endurance</div>
         <h3>Sustained Operations</h3>
         <p>Continuous-flow suppression via tethered water/foam supply from BFP truck or municipal hydrant. Recon airframes rotate through hot-swap battery cycles for indefinite over-watch.</p>
       </div>
       <div class="tech-card fade-in fade-in-delay-2">
         <div class="tech-spec">Day / Night</div>
-        <div class="tech-label">// All-Conditions Capability</div>
+        <div class="tech-label">All-Conditions Capability</div>
         <h3>Thermal &amp; Optical Imaging</h3>
         <p>Dual-payload thermal and 4K optical sensors locate trapped occupants through smoke, identify structural hot spots, and stream live intelligence to the Incident Commander.</p>
       </div>
       <div class="tech-card fade-in">
         <div class="tech-spec">Multi-Unit</div>
-        <div class="tech-label">// Coordinated Swarm</div>
+        <div class="tech-label">Coordinated Swarm</div>
         <h3>Multi-Drone Operations</h3>
         <p>Simultaneous reconnaissance, suppression, and over-watch from coordinated airframes — managed by a single Remote Pilot in Command from a forward operating ground station.</p>
       </div>
       <div class="tech-card fade-in fade-in-delay-1">
         <div class="tech-spec">PH-Ready</div>
-        <div class="tech-label">// Local Integration</div>
+        <div class="tech-label">Local Integration</div>
         <h3>BFP Truck &amp; Hydrant Ready</h3>
         <p>Designed around the fittings, pressures, and operational tempo of Bureau of Fire Protection equipment. No bespoke infrastructure required — connect, deploy, suppress.</p>
       </div>
       <div class="tech-card fade-in fade-in-delay-2">
         <div class="tech-spec">Interop</div>
-        <div class="tech-label">// Comms Architecture</div>
+        <div class="tech-label">Comms Architecture</div>
         <h3>Inter-Agency Comms</h3>
         <p>Encrypted command-and-control link, optional live feed to BFP / MDRRMC / LGU command posts, and recorded mission data for post-incident review and insurance documentation.</p>
       </div>
@@ -1559,7 +1570,7 @@ h1, h2, h3, h4, h5, h6 {
 <section class="how-it-works" id="how-it-works">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Operational Sequence</p>
+      <p class="section-label">Operational Sequence</p>
       <h2 class="section-heading">HOW A <span class="ember">DEPLOYMENT</span> UNFOLDS</h2>
     </div>
     <div class="steps">
@@ -1596,12 +1607,12 @@ h1, h2, h3, h4, h5, h6 {
 <section class="engagement">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Engagement Model</p>
-      <h2 class="section-heading">THREE WAYS TO <span class="ember">PARTNER</span></h2>
+      <p class="section-label">How We Work With You</p>
+      <h2 class="section-heading">A COMPLETE <span class="ember">FIRE-RESPONSE PARTNERSHIP</span></h2>
+      <p class="section-subtitle">From equipment to training to ongoing support — every engagement includes the capabilities you need to stand up and sustain an aerial fire-response programme.</p>
     </div>
     <div class="engagement-grid">
       <div class="engagement-card fade-in">
-        <span class="badge">// Option 01</span>
         <h3>Equipment Sale</h3>
         <p>Outright acquisition of Skyline firefighting RPAS systems for BFP units, LGUs, industrial operators, or private fire brigades. Configured to your jurisdiction, terrain, and asset risk profile.</p>
         <ul>
@@ -1612,7 +1623,6 @@ h1, h2, h3, h4, h5, h6 {
         </ul>
       </div>
       <div class="engagement-card fade-in fade-in-delay-1">
-        <span class="badge">// Option 02</span>
         <h3>Training &amp; Consulting</h3>
         <p>End-to-end programme to stand up an aerial fire-response capability inside your organisation — from CAAP RPIC certification of your operators to integration with existing dispatch and command protocols.</p>
         <ul>
@@ -1623,7 +1633,6 @@ h1, h2, h3, h4, h5, h6 {
         </ul>
       </div>
       <div class="engagement-card fade-in fade-in-delay-2">
-        <span class="badge">// Option 03</span>
         <h3>Maintenance &amp; Repairs</h3>
         <p>Ongoing airworthiness, depot-level repair, software updates, and surge support — keeping your fleet mission-capable across the rainy season and beyond.</p>
         <ul>
@@ -1641,50 +1650,50 @@ h1, h2, h3, h4, h5, h6 {
 <section class="comparison">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Capability Comparison</p>
+      <p class="section-label">Capability Comparison</p>
       <h2 class="section-heading">AERIAL FIRE RESPONSE <span class="ember">VS.</span> CONVENTIONAL TRUCKS &amp; LADDERS</h2>
     </div>
     <table class="comparison-table fade-in fade-in-delay-1">
       <thead>
         <tr>
-          <th>// Capability</th>
+          <th>Capability</th>
           <th>Skyline RPAS</th>
           <th>Fire Trucks &amp; Ladders</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>// Vertical Reach</td>
+          <td>Vertical Reach</td>
           <td>Up to 160 metres / 55 storeys</td>
           <td>~30 metres / 10 storeys</td>
         </tr>
         <tr>
-          <td>// Access</td>
+          <td>Access</td>
           <td>Alleys, rooftops, water, restricted zones</td>
           <td>Paved roads &amp; cleared approaches only</td>
         </tr>
         <tr>
-          <td>// Setup Time</td>
+          <td>Setup Time</td>
           <td>Airborne within minutes of arrival</td>
           <td>Ladder rigging &amp; positioning required</td>
         </tr>
         <tr>
-          <td>// Risk to Personnel</td>
+          <td>Risk to Personnel</td>
           <td>Zero firefighters at altitude</td>
           <td>Crews working at height &amp; inside structure</td>
         </tr>
         <tr>
-          <td>// Recon Capability</td>
+          <td>Recon Capability</td>
           <td>Live thermal &amp; optical to command post</td>
           <td>Visual estimate from ground level</td>
         </tr>
         <tr>
-          <td>// Night / Smoke Operations</td>
+          <td>Night / Smoke Operations</td>
           <td>Thermal-imaging native</td>
           <td>Severely limited visibility</td>
         </tr>
         <tr>
-          <td>// Documentation</td>
+          <td>Documentation</td>
           <td>Full flight &amp; mission data recorded</td>
           <td>Manual incident report only</td>
         </tr>
@@ -1697,7 +1706,7 @@ h1, h2, h3, h4, h5, h6 {
 <section class="safety" id="safety">
   <div class="container">
     <div class="fade-in">
-      <p class="section-label">// Safety &amp; Compliance</p>
+      <p class="section-label">Safety &amp; Compliance</p>
       <h2 class="section-heading">FLOWN BY <span class="ember">CERTIFIED OPERATORS</span>. INTEGRATED WITH NATIONAL FIRE PROTOCOL.</h2>
     </div>
     <div class="safety-grid">
@@ -1733,22 +1742,22 @@ h1, h2, h3, h4, h5, h6 {
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-header fade-in">
-      <p class="section-label">// Capability Briefing</p>
+      <p class="section-label">Capability Briefing</p>
       <h2 class="section-heading">REQUEST A <span class="ember">CAPABILITY BRIEFING</span></h2>
       <p class="contact-subtitle">For BFP units, LGUs, MMDA, MDRRMC councils, refinery operators, port authorities, and private industrial fire brigades — request a closed-door briefing on aerial fire-response capability tailored to your jurisdiction or asset.</p>
     </div>
 
     <div class="contact-methods fade-in fade-in-delay-1">
       <a href="mailto:skylinedrones.ph@gmail.com" class="contact-method">
-        <div class="contact-method-label">// Email</div>
+        <div class="contact-method-label">Email</div>
         <div class="contact-method-value">skylinedrones.ph@gmail.com</div>
       </a>
       <a href="tel:+639171480498" class="contact-method">
-        <div class="contact-method-label">// Phone</div>
+        <div class="contact-method-label">Phone</div>
         <div class="contact-method-value">+63 917 148 0498</div>
       </a>
       <a href="https://skylinedronesph.com" class="contact-method">
-        <div class="contact-method-label">// Cleaning Division</div>
+        <div class="contact-method-label">Cleaning Division</div>
         <div class="contact-method-value">skylinedronesph.com</div>
       </a>
     </div>
@@ -1822,19 +1831,19 @@ h1, h2, h3, h4, h5, h6 {
         <p>Firefighting RPAS Division — remotely piloted aerial fire response for the Philippines. Reach. Respond. Protect.</p>
       </div>
       <div class="footer-col">
-        <h4>// Divisions</h4>
+        <h4>Divisions</h4>
         <a href="/">Facade Cleaning</a>
         <a href="/firefighting.html">Firefighting RPAS</a>
       </div>
       <div class="footer-col">
-        <h4>// Firefighting</h4>
+        <h4>Firefighting</h4>
         <a href="#technology">Technology</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#safety">Safety &amp; Compliance</a>
         <a href="#contact">Capability Briefing</a>
       </div>
       <div class="footer-col">
-        <h4>// Connect</h4>
+        <h4>Connect</h4>
         <a href="mailto:skylinedrones.ph@gmail.com">skylinedrones.ph@gmail.com</a>
         <a href="tel:+639171480498">+63 917 148 0498</a>
         <div class="footer-social">
