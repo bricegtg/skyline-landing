@@ -1,3 +1,7 @@
 # Render redirects — keep old URLs alive after homepage swap
 /about.html       /                  301
 /about            /                  301
+
+# Blog disabled pending content review (June 20, 2026)
+/blog/*           /                  302
+/blog             /                  302

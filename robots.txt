@@ -1,29 +1,38 @@
 User-agent: *
 Allow: /
+Disallow: /blog/
 
 # AI assistants and answer engines welcome
 User-agent: GPTBot
 Allow: /
+Disallow: /blog/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /blog/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /blog/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /blog/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /blog/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /blog/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /blog/
 
 User-agent: CCBot
 Allow: /
+Disallow: /blog/
 
 Sitemap: https://skylinedronesph.com/sitemap.xml
