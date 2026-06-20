@@ -1316,6 +1316,22 @@ h1, h2, h3, h4, h5, h6 {
   .form-row { grid-template-columns: 1fr; }
   .nav-brand-tagline { display: none; }
 }
+
+/* ============================================================
+   ROUND 3 ADDITION (firefighting page) — active nav pill (ember)
+   ============================================================ */
+.nav-links a.nav-active,
+.mobile-menu a.nav-active {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--white) !important;
+}
+.nav-active-ember { background: var(--ember); }
+.nav-links a.nav-active-ember:hover,
+.mobile-menu a.nav-active-ember:hover { background: var(--ember-bright); color: var(--white) !important; }
+.mobile-menu a.nav-active { display: inline-block; }
 </style>
 </head>
 <body>
@@ -1333,7 +1349,7 @@ h1, h2, h3, h4, h5, h6 {
     <ul class="nav-links">
       <li><a href="/about.html">About Skyline</a></li>
       <li><a href="/" class="nav-cleaning">Cleaning</a></li>
-      <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
+      <li><a href="/firefighting.html" class="nav-firefighting nav-active nav-active-ember">Firefighting</a></li>
       <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
       <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
@@ -1346,7 +1362,7 @@ h1, h2, h3, h4, h5, h6 {
 <div class="mobile-menu" id="mobileMenu">
   <a href="/about.html" onclick="closeMobile()">About Skyline</a>
   <a href="/" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
-  <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
+  <a href="/firefighting.html" class="nav-firefighting nav-active nav-active-ember" onclick="closeMobile()">Firefighting</a>
   <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
   <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
 </div>

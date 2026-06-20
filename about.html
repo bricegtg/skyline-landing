@@ -1516,6 +1516,143 @@ h1, h2, h3, h4, h5, h6 {
   .verticals-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   ABOUT PAGE: GOLD-ONLY OVERRIDE (round 3)
+   Every ember/red token rendered on this page swept to gold.
+   ============================================================ */
+.section-label { color: var(--gold); }
+.section-label::before { background: var(--gold); }
+.nav-brand-tagline { color: var(--gold); }
+.nav-links a:hover { color: var(--gold); }
+.mobile-menu a:hover { color: var(--gold); }
+/* Neutralize other divisions' brand colors on the About page (no red/azure) */
+.nav-links a.nav-firefighting,
+.nav-links a.nav-imaging,
+.mobile-menu a.nav-firefighting,
+.mobile-menu a.nav-imaging { color: var(--text-muted); }
+.nav-links a.nav-firefighting:hover,
+.nav-links a.nav-imaging:hover,
+.mobile-menu a.nav-firefighting:hover,
+.mobile-menu a.nav-imaging:hover { color: var(--gold); }
+
+/* Hero breadcrumb -> gold */
+.hero-breadcrumb { color: var(--gold) !important; }
+.hero-breadcrumb::before { background: var(--gold) !important; }
+
+/* Hero radial glow -> gold tint */
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.95) 100%),
+    radial-gradient(ellipse at 65% 40%, rgba(232, 184, 75, 0.18), transparent 60%) !important;
+}
+
+/* Navbar bottom border -> gold tint */
+.navbar { border-bottom-color: rgba(232, 184, 75, 0.22) !important; }
+
+/* Stats bar -> gold */
+.stat-number { color: var(--gold) !important; }
+
+/* Who We Are callout accent -> gold */
+.who-callout { border-left-color: var(--gold) !important; }
+
+/* Pillars (Why Skyline) -> gold */
+.pillars .section-heading,
+.pillar-tag { color: var(--gold) !important; }
+.pillar-card::before { background: var(--gold) !important; }
+.pillar-card:hover { border-color: rgba(232, 184, 75, 0.35) !important; }
+
+/* CTA strip -> gold (heading + button already gold via btn-gold) */
+.cta-strip h2 .ember { color: var(--gold) !important; }
+
+/* Footer -> gold */
+.footer-col h4 { color: var(--gold) !important; }
+.footer-col a:hover { color: var(--gold) !important; }
+.footer-social a:hover svg { fill: var(--gold) !important; }
+.footer-bottom::before { background: var(--gold) !important; }
+
+/* Any generic ember helpers -> gold */
+.ember-text,
+.section-heading .ember { color: var(--gold) !important; }
+
+/* ---- ACTIVE NAV PILL (Contact-Us style filled pill) ---- */
+.nav-active,
+.mobile-menu a.nav-active {
+  background: var(--gold);
+  color: var(--bg-dark) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.nav-active:hover,
+.mobile-menu a.nav-active:hover { background: var(--dark-gold); color: var(--bg-dark) !important; }
+.mobile-menu a.nav-active { display: inline-block; border-bottom: none; }
+.nav-active-ember { background: var(--ember); }
+.nav-active-ember:hover { background: var(--ember-bright); }
+.nav-active-azure { background: var(--azure); }
+.nav-active-azure:hover { background: var(--azure-light); }
+
+/* ---- WHO WE SERVE: photo-tile grid (mirrors firefighting .scenarios-grid) ---- */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.scenario-tile {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+  cursor: default;
+}
+.scenario-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out);
+  filter: grayscale(0.15) contrast(1.05);
+}
+.scenario-tile:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0) contrast(1.1);
+}
+.scenario-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0) 30%, rgba(10,10,10,0.92) 100%);
+  pointer-events: none;
+}
+.scenario-meta {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 20px;
+  z-index: 2;
+}
+.scenario-meta-tag {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  margin-bottom: 6px;
+}
+.scenario-meta h4 {
+  font-size: 16px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+@media (max-width: 900px) {
+  .scenarios-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .scenarios-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1526,11 +1663,11 @@ h1, h2, h3, h4, h5, h6 {
       <img src="logo-light.png" alt="Skyline Drones logo" width="120" height="40">
       <div class="nav-brand-text">
         <span class="nav-brand-name">Skyline Drones</span>
-        <span class="nav-brand-tagline">Skyline Drones — Manila, Philippines</span>
+        <span class="nav-brand-tagline">Manila, Philippines</span>
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="/about.html">About Skyline</a></li>
+      <li><a href="/about.html" class="nav-active">About Skyline</a></li>
       <li><a href="/" class="nav-cleaning">Cleaning</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
       <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
@@ -1543,7 +1680,7 @@ h1, h2, h3, h4, h5, h6 {
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/about.html" onclick="closeMobile()">About Skyline</a>
+  <a href="/about.html" class="nav-active" onclick="closeMobile()">About Skyline</a>
   <a href="/" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
   <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
@@ -1614,12 +1751,12 @@ h1, h2, h3, h4, h5, h6 {
 <!-- ==================== 5. THREE VERTICALS ==================== -->
 <section class="verticals" id="verticals">
   <div class="container">
-    <p class="section-label fade-in">Three Divisions</p>
-    <h2 class="section-heading fade-in">ONE FLEET. <span class="gold">THREE DIVISIONS.</span></h2>
+    <p class="section-label fade-in">Our Services</p>
+    <h2 class="section-heading fade-in"><span class="gold">WHAT WE OFFER</span></h2>
     <div class="verticals-grid">
       <div class="vertical-card accent-gold fade-in">
-        <div class="vertical-media gold-fallback">
-          <span class="vertical-mark">Facade Cleaning</span>
+        <div class="vertical-media">
+          <img src="cleaning-hero.jpg" alt="Facade cleaning drone above a Manila high-rise" onerror="this.style.opacity=0">
         </div>
         <div class="vertical-body">
           <h3>Facade Cleaning</h3>
@@ -1627,24 +1764,24 @@ h1, h2, h3, h4, h5, h6 {
           <a href="/" class="btn-outline-gold">Explore Cleaning &rarr;</a>
         </div>
       </div>
-      <div class="vertical-card accent-ember fade-in fade-in-delay-1">
+      <div class="vertical-card accent-gold fade-in fade-in-delay-1">
         <div class="vertical-media">
-          <img src="firefighting-hero.jpg" alt="Industrial firefighting drone above a Manila high-rise at night">
+          <img src="firefighting-hero.jpg" alt="Industrial firefighting drone above a Manila high-rise at night" onerror="this.style.opacity=0">
         </div>
         <div class="vertical-body">
           <h3>Aerial Firefighting</h3>
           <p>Industrial firefighting RPAS for high-rise, refinery, warehouse, and wildland response. 500 L payload, 500 m reach, 4-minute deployment. Built to fly alongside the BFP and LGU command protocols.</p>
-          <a href="/firefighting.html" class="btn-outline-ember">Explore Firefighting &rarr;</a>
+          <a href="/firefighting.html" class="btn-outline-gold">Explore Firefighting &rarr;</a>
         </div>
       </div>
-      <div class="vertical-card accent-azure fade-in fade-in-delay-2">
+      <div class="vertical-card accent-gold fade-in fade-in-delay-2">
         <div class="vertical-media">
-          <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
+          <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour" onerror="this.style.opacity=0">
         </div>
         <div class="vertical-body">
           <h3>Aerial Imaging & Inspection</h3>
           <p>Real estate aerials, construction progress, brand films, roof & facade inspection, events, and cinematic reels. Same airframe family, same CAAP-certified crew, broadcast-grade output.</p>
-          <a href="/imaging.html" class="btn-outline-azure">Explore Imaging &rarr;</a>
+          <a href="/imaging.html" class="btn-outline-gold">Explore Imaging &rarr;</a>
         </div>
       </div>
     </div>
@@ -1655,7 +1792,7 @@ h1, h2, h3, h4, h5, h6 {
 <section class="pillars" id="why">
   <div class="container">
     <p class="section-label fade-in">Why Skyline</p>
-    <h2 class="section-heading fade-in">ONE CREW. <span class="gold">ONE SAFETY UMBRELLA.</span></h2>
+    <h2 class="section-heading fade-in"><span class="gold">ONE SAFETY UMBRELLA.</span></h2>
     <div class="pillars-grid">
       <div class="pillar-card fade-in">
         <span class="pillar-tag">01</span>
@@ -1681,52 +1818,68 @@ h1, h2, h3, h4, h5, h6 {
   <div class="container">
     <p class="section-label fade-in">Who We Serve</p>
     <h2 class="serve-heading fade-in">WE SERVE THE PHILIPPINES' MOST DEMANDING ASSETS</h2>
-    <div class="tag-band fade-in fade-in-delay-1">
-      <span>Commercial Towers</span>
-      <span>Hotels</span>
-      <span>Government</span>
-      <span>Airports</span>
-      <span>Oil & Gas</span>
-      <span>Industrial & Warehouse</span>
-      <span>Public Infrastructure</span>
-      <span>Real Estate Developments</span>
-      <span>Stadiums</span>
-      <span>Heritage Buildings</span>
+    <div class="scenarios-grid">
+      <div class="scenario-tile fade-in">
+        <img src="serve-commercial.jpg" alt="Commercial towers" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">01</div>
+          <h4>Commercial Towers</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-1">
+        <img src="serve-hotel.jpg" alt="Hotels and hospitality" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">02</div>
+          <h4>Hotels &amp; Hospitality</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-2">
+        <img src="serve-government.jpg" alt="Government and civic buildings" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">03</div>
+          <h4>Government &amp; Civic</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-3">
+        <img src="serve-airport.jpg" alt="Airports and aviation" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">04</div>
+          <h4>Airports &amp; Aviation</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in">
+        <img src="serve-oilgas.jpg" alt="Oil and gas facilities" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">05</div>
+          <h4>Oil &amp; Gas</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-1">
+        <img src="serve-warehouse.jpg" alt="Industrial and warehouse" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">06</div>
+          <h4>Industrial &amp; Warehouse</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-2">
+        <img src="serve-infrastructure.jpg" alt="Public infrastructure" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">07</div>
+          <h4>Public Infrastructure</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-3">
+        <img src="serve-office.jpg" alt="Office campuses" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">08</div>
+          <h4>Office Campuses</h4>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 8. HOW WE WORK ==================== -->
-<section class="how-it-works" id="how-it-works">
-  <div class="container">
-    <p class="section-label fade-in">How We Work</p>
-    <h2 class="section-heading fade-in">FOUR STEPS. <span class="gold">ONE CREW.</span></h2>
-    <div class="steps">
-      <div class="step fade-in">
-        <div class="step-number">1</div>
-        <h3>Brief</h3>
-        <p>A short call to scope the job — cleaning, firefighting, or imaging. Goal, location, timeline, sensitivities.</p>
-      </div>
-      <div class="step fade-in fade-in-delay-1">
-        <div class="step-number">2</div>
-        <h3>Plan</h3>
-        <p>We file CAAP airspace clearance, brief the property owner, stage the crew, and confirm insurance.</p>
-      </div>
-      <div class="step fade-in fade-in-delay-2">
-        <div class="step-number">3</div>
-        <h3>Fly</h3>
-        <p>One crew, one airframe family, one mobilization. Multiple divisions if needed in a single visit.</p>
-      </div>
-      <div class="step fade-in fade-in-delay-3">
-        <div class="step-number">4</div>
-        <h3>Deliver</h3>
-        <p>Documented flight logs, completion record, deliverables on schedule. Audit-ready.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 9. CONTACT CTA STRIP ==================== -->
+<!-- ==================== 8. CONTACT CTA STRIP ==================== -->
 <section class="cta-strip" id="contact">
   <div class="container">
     <h2 class="fade-in">READY TO ELEVATE THE WORK?</h2>

@@ -1312,6 +1312,49 @@ h1, h2, h3, h4, h5, h6 {
   .form-row { grid-template-columns: 1fr; }
   .nav-brand-tagline { display: none; }
 }
+
+/* ============================================================
+   ROUND 3 ADDITIONS (imaging page)
+   ============================================================ */
+
+/* ---- ACTIVE NAV PILL (Contact-Us style filled pill, azure) ---- */
+.nav-links a.nav-active,
+.mobile-menu a.nav-active {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--bg-dark) !important;
+}
+.nav-active-azure { background: var(--azure); }
+.nav-links a.nav-active-azure:hover,
+.mobile-menu a.nav-active-azure:hover { background: var(--azure-light); color: var(--bg-dark) !important; }
+.mobile-menu a.nav-active { display: inline-block; }
+
+/* ---- FOOTER MOVING ACCENT STRIP (azure) ---- */
+.footer-strip {
+  background: var(--azure);
+  color: var(--white);
+  padding: 1rem 0;
+  overflow: hidden;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+.footer-strip-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 2rem;
+  animation: footer-strip-scroll 40s linear infinite;
+}
+.footer-strip-track span { font-size: 0.875rem; text-transform: uppercase; }
+@keyframes footer-strip-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-strip-track { animation: none; }
+}
 </style>
 </head>
 <body>
@@ -1330,7 +1373,7 @@ h1, h2, h3, h4, h5, h6 {
       <li><a href="/about.html">About Skyline</a></li>
       <li><a href="/" class="nav-cleaning">Cleaning</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
-      <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
+      <li><a href="/imaging.html" class="nav-imaging nav-active nav-active-azure">Aerial Imaging & Inspection</a></li>
       <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1343,7 +1386,7 @@ h1, h2, h3, h4, h5, h6 {
   <a href="/about.html" onclick="closeMobile()">About Skyline</a>
   <a href="/" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
-  <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
+  <a href="/imaging.html" class="nav-imaging nav-active nav-active-azure" onclick="closeMobile()">Aerial Imaging & Inspection</a>
   <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
 </div>
 
@@ -1811,6 +1854,20 @@ h1, h2, h3, h4, h5, h6 {
     </a>
   </div>
 </section>
+
+<!-- ==================== MOVING ACCENT STRIP ==================== -->
+<div class="footer-strip" aria-hidden="true">
+  <div class="footer-strip-track">
+    <span>Every Angle</span><span>&middot;</span>
+    <span>Every Height</span><span>&middot;</span>
+    <span>CAAP-Certified</span><span>&middot;</span>
+    <span>Manila &middot; Philippines</span><span>&middot;</span>
+    <span>Every Angle</span><span>&middot;</span>
+    <span>Every Height</span><span>&middot;</span>
+    <span>CAAP-Certified</span><span>&middot;</span>
+    <span>Manila &middot; Philippines</span><span>&middot;</span>
+  </div>
+</div>
 
 <!-- ==================== 14. FOOTER ==================== -->
 <footer class="footer">
