@@ -979,6 +979,55 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--warm-gray);
 }
 
+/* ========== 9. SUB-COMPARISON BLOCKS (Featured Snippet Targets) ========== */
+.comparison-subtables {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.comparison-subtable {
+  scroll-margin-top: 100px;
+}
+.comparison-subhead {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: clamp(20px, 2.4vw, 28px);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+.comparison-summary {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--warm-gray);
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+.comparison-summary strong { color: var(--white); }
+.comparison-cta {
+  text-align: center;
+  margin-top: 24px;
+}
+.comparison-cta .btn-gold {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 6px;
+  transition: transform .2s, box-shadow .2s;
+}
+.comparison-cta .btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(232,184,75,0.3);
+}
+
 /* ========== 10. SAFETY & COMPLIANCE ========== */
 .safety {
   padding: clamp(64px, 10vw, 120px) 0;
@@ -1537,6 +1586,38 @@ h1, h2, h3, h4, h5, h6 {
         "@type": "Answer",
         "text": "Yes. Hotel facade cleaning is a Skyline specialty. Our drones operate quietly relative to high-pressure rope-access washers, and we can schedule flights during low-occupancy windows — typically mornings between 9 AM and noon. There is no scaffolding to obstruct views, no harnessed workers passing guest windows, and no extended occupancy of the building exterior."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Drone vs rope access cleaning Philippines: which is better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drone facade cleaning is faster, safer, and matches or beats rope-access pricing on Philippine high-rises above 30 metres. Drones eliminate workers at height, finish in one-tenth the time (1,000–2,000 sqm/hour vs 80–150 sqm/hour per abseiler), need only 30 minutes of setup vs 1–3 days of rigging, and reach 160 metres. Rope access is still useful for short-duration repair work, but for routine facade cleaning the drone replaces the entire category."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Drone vs scaffolding cleaning Philippines: how do they compare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scaffolding requires 1–3 weeks of erection, LGU permits, blocked sidewalks, and 3–7 days of dismantling — a 20-storey tower takes 6–10 weeks end-to-end. Skyline drones complete the same building in 2–4 days with zero pedestrian disruption, no permits for working at height, and no structural anchors on the facade. Scaffolding still makes sense for low-rise restoration projects requiring heavy surface work, but for cleaning it is the slowest and most expensive option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gondola vs drone cleaning Philippines: which should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drone cleaning works on every Philippine building, while a gondola (Building Maintenance Unit) only works if your tower already has a certified, recently-inspected BMU. BMU recertification costs PHP 80,000–250,000 every 12 months and many Philippine buildings have failed inspections. Drones avoid this entirely — no roof equipment, no operator certification per building, full reach into recessed facades, and 3–5× faster cleaning speed than a gondola."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Drone vs traditional building cleaning Philippines: what is the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional building cleaning in the Philippines combines rope access, scaffolding, gondolas, and ground-level pole washing — all labour-intensive and capped at low elevations or limited reach. Drone cleaning replaces all four methods on commercial high-rises: 160-metre reach, zero workers at height, 1,000–2,000 sqm per hour, no permits for working at height, and deionised water with no detergents. A 20-storey commercial tower goes from quote to clean in 2–4 days versus 3–10 weeks with traditional methods."
+      }
     }
   ]
 }
@@ -1872,6 +1953,111 @@ h1, h2, h3, h4, h5, h6 {
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- ========== Featured Snippet Targets: 4 Head-to-Head Tables ========== -->
+    <div class="comparison-subtables">
+
+      <!-- 1. Drone vs Rope Access -->
+      <div class="comparison-subtable fade-in" id="drone-vs-rope-access">
+        <h3 class="comparison-subhead">Drone vs Rope Access Cleaning in the Philippines</h3>
+        <p class="comparison-summary"><strong>Summary:</strong> Drone facade cleaning eliminates the rope-access category entirely. No workers at height, no rigging permits, no roof anchor inspections. A drone crew typically completes a high-rise facade in <strong>one-tenth</strong> the time of a rope-access team, with zero fall risk, and matches or beats rope-access pricing on buildings above 30 metres.</p>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Factor</th><th>Drone Cleaning (Skyline)</th><th>Rope Access</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Workers at Height</td><td>Zero — fully remote operation</td><td>2–6 abseilers per building</td></tr>
+              <tr><td>Setup Time</td><td>30 minutes to 1 hour</td><td>1–3 days (anchors, permits, rigging)</td></tr>
+              <tr><td>Speed</td><td>1,000–2,000 sqm per hour</td><td>80–150 sqm per hour per abseiler</td></tr>
+              <tr><td>Fall Risk</td><td>None</td><td>High — fall-arrest reliance every shift</td></tr>
+              <tr><td>Max Height Cleaned</td><td>160 metres (~55 stories)</td><td>Limited by rope length &amp; anchor strength</td></tr>
+              <tr><td>Weather Window</td><td>Wind up to 8 m/s; pauses for rain</td><td>Cancelled at wind &gt;7 m/s or wet ropes</td></tr>
+              <tr><td>Insurance Liability</td><td>Equipment-only — minimal exposure</td><td>Working-at-height workers comp + third party</td></tr>
+              <tr><td>Disruption to Building</td><td>None — entrances stay open</td><td>Roof anchors monopolised; gondolas obstruct windows</td></tr>
+              <tr><td>Typical Cost (per sqm)</td><td>Matches or beats rope access above 30 m</td><td>Premium for high-rise; cheaper for low-rise</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. Drone vs Scaffolding -->
+      <div class="comparison-subtable fade-in" id="drone-vs-scaffolding">
+        <h3 class="comparison-subhead">Drone vs Scaffolding Cleaning in the Philippines</h3>
+        <p class="comparison-summary"><strong>Summary:</strong> Scaffolding is the slowest, most disruptive facade-cleaning method. Setup alone takes 1–3 weeks, blocks pedestrian access, and requires LGU permits. Skyline drones eliminate scaffolding entirely — a 20-storey tower goes from quote to clean in days, not months.</p>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Factor</th><th>Drone Cleaning (Skyline)</th><th>Scaffolding</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Setup Time</td><td>30 minutes to 1 hour</td><td>1–3 weeks (erection + inspection)</td></tr>
+              <tr><td>Tear-down Time</td><td>None — drone returns to base</td><td>3–7 days dismantling</td></tr>
+              <tr><td>Pedestrian Access</td><td>Unaffected</td><td>Blocked or rerouted for weeks</td></tr>
+              <tr><td>LGU / Sidewalk Permits</td><td>Not required for cleaning</td><td>Required — barangay + city engineer</td></tr>
+              <tr><td>Tenant Disruption</td><td>None — windows stay clear</td><td>Windows obstructed for entire project</td></tr>
+              <tr><td>Total Project Duration (20-storey)</td><td>2–4 days end-to-end</td><td>6–10 weeks end-to-end</td></tr>
+              <tr><td>Building Impact</td><td>Zero — no structural attachments</td><td>Wall ties, anchor loads, paint damage on dismantle</td></tr>
+              <tr><td>Aesthetic Impact on Tenants</td><td>None — invisible from inside</td><td>Building looks under construction for weeks</td></tr>
+              <tr><td>Best For</td><td>Towers, hotels, malls, glass curtain walls</td><td>Low-rise restoration with heavy surface work</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. Drone vs Gondola -->
+      <div class="comparison-subtable fade-in" id="drone-vs-gondola">
+        <h3 class="comparison-subhead">Drone vs Gondola (BMU) Cleaning in the Philippines</h3>
+        <p class="comparison-summary"><strong>Summary:</strong> Gondola (Building Maintenance Unit) cleaning requires a roof-mounted cradle, certified operators, and annual recertification. Many Philippine buildings either lack a BMU or own one that has failed inspection. Drone cleaning works on every building — no roof equipment, no recertification, no waiting for BMU repairs.</p>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Factor</th><th>Drone Cleaning (Skyline)</th><th>Gondola / BMU</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Equipment Needed at Building</td><td>None</td><td>Permanent roof-mounted BMU</td></tr>
+              <tr><td>Operator Certification</td><td>CAAP Remote Pilot License (Skyline holds)</td><td>OSH gondola operator certificate per crew</td></tr>
+              <tr><td>Annual Recertification Burden</td><td>None — Skyline handles equipment</td><td>BMU recertification every 12 months (PHP 80k–250k)</td></tr>
+              <tr><td>Works on Buildings Without BMU</td><td>Yes — every building</td><td>No — requires BMU or BMU rental</td></tr>
+              <tr><td>Setup Per Job</td><td>30 minutes</td><td>2–4 hours per facade section</td></tr>
+              <tr><td>Reach to Building Corners</td><td>Full — drone flies around</td><td>Limited — BMU rails fixed; dead zones at corners</td></tr>
+              <tr><td>Speed</td><td>1,000–2,000 sqm per hour</td><td>200–400 sqm per hour</td></tr>
+              <tr><td>Reach into Recessed Facades</td><td>Full — drone manoeuvres</td><td>Poor — cradle hangs vertical only</td></tr>
+              <tr><td>Risk Profile</td><td>Equipment-only liability</td><td>Workers suspended over public space</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4. Drone vs Traditional (Manual / Pole / Pressure-Washer Crew) -->
+      <div class="comparison-subtable fade-in" id="drone-vs-traditional">
+        <h3 class="comparison-subhead">Drone vs Traditional Building Cleaning in the Philippines</h3>
+        <p class="comparison-summary"><strong>Summary:</strong> Traditional building cleaning in the Philippines means a mix of rope access, scaffolding, gondolas, and ground-level pole washing — labour-intensive, slow, and capped at low elevations. Drone cleaning replaces all of these on commercial high-rises. It is faster, safer, works on any height, and requires no permits for working at height.</p>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Factor</th><th>Drone Cleaning (Skyline)</th><th>Traditional Methods</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Methods Replaced</td><td>Drone replaces all of the below</td><td>Rope access, scaffolding, gondola, pole washing</td></tr>
+              <tr><td>Max Reachable Height</td><td>160 metres / 55 stories</td><td>~25 m (pole) up to BMU limits with workers at height</td></tr>
+              <tr><td>Workers at Height</td><td>Zero</td><td>2–8 per building</td></tr>
+              <tr><td>Cleaning Speed</td><td>1,000–2,000 sqm per hour</td><td>80–400 sqm per hour</td></tr>
+              <tr><td>Project Duration (20-storey tower)</td><td>2–4 days</td><td>3–10 weeks</td></tr>
+              <tr><td>Surface Types Handled</td><td>Glass, ACP, stone, terracotta, stucco, metal</td><td>Glass &amp; accessible surfaces only</td></tr>
+              <tr><td>Building Operations Impact</td><td>Zero — no closures</td><td>Entrances, lobbies, sidewalks affected</td></tr>
+              <tr><td>Water &amp; Chemical Use</td><td>Deionised water — no detergents</td><td>Detergents, acid rinses, abrasive scrubbing</td></tr>
+              <tr><td>Insurance Premium Impact</td><td>Lower — no workers at height</td><td>Higher — full working-at-height policies</td></tr>
+              <tr><td>CAAP / Regulatory Compliance</td><td>CAAP Part 11 RPAS Operator Certificate</td><td>OSH working-at-height certificates per crew</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="comparison-cta">
+        <a href="#contact" class="btn-gold">Get a Free Building Assessment →</a>
+      </p>
     </div>
   </div>
 </section>
