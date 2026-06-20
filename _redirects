@@ -1,0 +1,3 @@
+# Render redirects — keep old URLs alive after homepage swap
+/about.html       /                  301
+/about            /                  301
