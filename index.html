@@ -47,6 +47,8 @@
   --white: #FFFFFF;
   --text-muted: #AAAAAA;
   --text-dim: #777777;
+  --azure: #3D6FB8;
+  --azure-light: #5589CC;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -215,6 +217,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a:hover { color: var(--gold); }
 .nav-links a.nav-firefighting { color: #D9362B; }
 .nav-links a.nav-firefighting:hover { color: #FF6B5A; }
+.nav-links a.nav-imaging { color: var(--azure); }
+.nav-links a.nav-imaging:hover { color: var(--azure-light); }
 
 .nav-cta {
   display: inline-block;
@@ -291,6 +295,8 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu a:hover { color: var(--gold); }
 .mobile-menu a.nav-firefighting { color: #D9362B; }
 .mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
+.mobile-menu a.nav-imaging { color: var(--azure); }
+.mobile-menu a.nav-imaging:hover { color: var(--azure-light); }
 
 .mobile-menu .nav-cta {
   display: block;
@@ -1308,6 +1314,7 @@ h1, h2, h3, h4, h5, h6 {
       <li><a href="#services">Services</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
+      <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
       <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1323,6 +1330,7 @@ h1, h2, h3, h4, h5, h6 {
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
+  <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
   <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
 </div>
 
