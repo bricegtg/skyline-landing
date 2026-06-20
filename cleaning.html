@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<meta name="description" content="Skyline Drones provides autonomous drone-powered building facade cleaning in Manila, Philippines. Zero workers at height, 10× faster than manual methods, up to 160 metres.">
+<meta name="description" content="Drone facade cleaning in Manila, BGC, Makati, Ortigas and across the Philippines. Skyline Drones cleans glass curtain walls, hotel facades, office towers and high-rise buildings — zero workers at height, 10× faster than rope access, up to 160 metres. CAAP-certified.">
+<meta name="keywords" content="drone facade cleaning Manila, building facade cleaning Philippines, facade cleaning Makati, facade cleaning BGC, drone building cleaning Manila, hotel facade cleaning Philippines, high-rise cleaning Manila, drone window cleaning Philippines, skyscraper cleaning Manila, rope access alternative, scaffolding alternative cleaning">
 <meta property="og:title" content="Skyline Drones — Elevate Cleaning to New Heights">
 <meta property="og:description" content="Drone-powered building facade cleaning service in Manila, Philippines. Every surface, any height, zero risk.">
 <meta property="og:type" content="website">
@@ -625,7 +626,80 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
+/* ========== LOCATIONS GRID ========== */
+.locations-section {
+  padding: clamp(64px, 10vw, 120px) 0;
+  background: #0d0d0d;
+}
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+.location-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 24px 22px;
+  border-radius: 4px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.location-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.location-card h3 {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.location-card p {
+  font-size: 13.5px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .locations-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .locations-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== FAQ ACCORDION ========== */
+.faq-section {
+  padding: clamp(64px, 10vw, 120px) 0;
+  background: var(--black);
+}
+.faq-list {
+  margin-top: 48px;
+  max-width: 980px;
+}
+.faq-item {
+  border-top: 1px solid var(--card-border);
+  padding: 26px 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--card-border); }
+.faq-item h3 {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.faq-item p {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+}
+.faq-item p + p { margin-top: 12px; }
+
 /* ========== 7. HOW IT WORKS ========== */
+
 .how-it-works {
   padding: clamp(64px, 10vw, 120px) 0;
   background: var(--black);
@@ -1393,6 +1467,80 @@ h1, h2, h3, h4, h5, h6 {
   .footer-strip-track { animation: none; }
 }
 </style>
+
+<!-- FAQPage schema for rich snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does drone facade cleaning compare to rope access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drone facade cleaning eliminates the entire rope-access category. There are no workers at height, no rigging, no permits to suspend workers off the roof, and no scaffold setup or breakdown. A drone-cleaning crew typically completes a high-rise facade in one-tenth the time of a rope-access team, with zero exposure to falls. For most buildings above 30 metres, drone cleaning is the modern alternative to rope access in the Philippines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does drone facade cleaning cost in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing depends on building height, facade material, surface area, and access conditions. As a rule of thumb, drone facade cleaning typically matches or beats rope-access pricing on jobs above 30 metres — because the labour, scaffolding, and insurance overheads of working at height are eliminated. We provide a fixed-fee quote within 48 hours of a building photo and address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is drone cleaning safe for glass curtain walls and stone cladding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our drones use deionised water with software-controlled spray pressure calibrated for each surface — glass, aluminium composite, stone, terracotta, and stucco. There is no abrasive scrubbing, no chemicals that etch glass coatings, and no risk of seal damage from pressurised rope-access washing. Deionised water dries streak-free with no residue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What buildings in Manila can Skyline clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skyline cleans high-rise commercial towers, hotels, condominiums, hospitals, malls, government buildings, airport facades, oil and gas facilities, and industrial warehouses across Metro Manila — BGC, Makati, Ortigas, Quezon City, Pasig, Pasay, Mandaluyong, Alabang — and on contract anywhere in the Philippines. Operating ceiling: 160 metres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have a scaffolding alternative for facade cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Skyline is the scaffolding alternative. We use autonomous rotor-driven cleaning drones that fly to the facade, spray deionised water, and return to base. No scaffolding rental, no permits to occupy sidewalks, no multi-week setup. A typical commercial tower is operational again the same day the cleaning starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Skyline drone pilots licensed in the Philippines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Skyline pilots are CAAP-certified (Civil Aviation Authority of the Philippines) Remote Pilots, fully insured, and operating under valid commercial drone permits. We submit flight permits and risk assessments for every job and carry public-liability cover at every site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does drone cleaning take on a typical Manila office tower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 20-storey commercial tower (approximately 8,000 m² of facade) takes a Skyline drone crew 2–4 days end-to-end, depending on weather windows. The same job by rope access typically takes 3–4 weeks. Skyline crews can also operate after-hours and on weekends to minimise tenant disruption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can drones clean hotel facades without disturbing guests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Hotel facade cleaning is a Skyline specialty. Our drones operate quietly relative to high-pressure rope-access washers, and we can schedule flights during low-occupancy windows — typically mornings between 9 AM and noon. There is no scaffolding to obstruct views, no harnessed workers passing guest windows, and no extended occupancy of the building exterior."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1728,7 +1876,99 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </section>
 
+<!-- ==================== 9a. WHERE WE WORK (SEO LOCATIONS) ==================== -->
+<section class="locations-section" id="locations">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">Where We Work</p>
+      <h2 class="section-heading">DRONE FACADE CLEANING <span class="gold">ACROSS METRO MANILA</span></h2>
+      <p style="font-size: 16px; color: var(--warm-gray); line-height: 1.7; max-width: 820px; margin-top: 18px;">
+        Skyline Drones operates building facade cleaning, drone window cleaning, and high-rise exterior cleaning services across every major commercial district in Metro Manila — and on contract anywhere in the Philippines, including Cebu, Davao, and Clark.
+      </p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card fade-in">
+        <h3>BGC &amp; Taguig</h3>
+        <p>Drone facade cleaning for Bonifacio Global City office towers, condominiums, and mixed-use developments. Glass curtain wall specialists for BGC's Grade-A buildings.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-1">
+        <h3>Makati CBD</h3>
+        <p>Building cleaning Makati — high-rise office and hotel facade cleaning across Ayala Avenue, Salcedo Village, and Legazpi Village. Zero scaffolding required.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-2">
+        <h3>Ortigas Center</h3>
+        <p>High-rise cleaning Ortigas — facade and window cleaning for office towers, malls, and condominium buildings across Ortigas, Greenhills, and Mandaluyong.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-3">
+        <h3>Quezon City</h3>
+        <p>Building maintenance Quezon City — drone-powered exterior cleaning for commercial buildings, hospitals, and government complexes across QC.</p>
+      </div>
+      <div class="location-card fade-in">
+        <h3>Pasig &amp; Mandaluyong</h3>
+        <p>Office tower facade cleaning across Pasig's commercial districts. Glass, stone, and metal cladding cleaned without rope access teams.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-1">
+        <h3>Pasay &amp; MOA</h3>
+        <p>Hotel facade cleaning and mall window cleaning across Pasay City and the Mall of Asia complex. Coastal salt-spray cleaning a specialty.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-2">
+        <h3>Alabang &amp; Muntinlupa</h3>
+        <p>Commercial building cleaning for Alabang's business parks, Filinvest, and Festival Mall corridor. Drone deployment within 48 hours of booking.</p>
+      </div>
+      <div class="location-card fade-in fade-in-delay-3">
+        <h3>Nationwide (PH)</h3>
+        <p>Skyline deploys nationally on contract — Cebu City, Davao, Clark, Iloilo, Baguio. CAAP-permitted operations anywhere in the Philippines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 9b. FAQ (Long-Tail SEO + Featured Snippet Target) ==================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">Frequently Asked</p>
+      <h2 class="section-heading">DRONE FACADE CLEANING <span class="gold">QUESTIONS, ANSWERED</span></h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <h3>How does drone facade cleaning compare to rope access?</h3>
+        <p>Drone facade cleaning eliminates the entire rope-access category. There are no workers at height, no rigging, no permits to suspend workers off the roof, and no scaffold setup or breakdown. A drone-cleaning crew typically completes a high-rise facade in <strong>one-tenth the time</strong> of a rope-access team, with zero exposure to falls. For most buildings above 30 metres, drone cleaning is the modern alternative to rope access in the Philippines.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does drone facade cleaning cost in the Philippines?</h3>
+        <p>Pricing depends on building height, facade material, surface area, and access conditions. As a rule of thumb, drone facade cleaning typically <strong>matches or beats rope-access pricing</strong> on jobs above 30 metres — because the labour, scaffolding, and insurance overheads of working at height are eliminated. We provide a fixed-fee quote within 48 hours of a building photo and address.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is drone cleaning safe for glass curtain walls and stone cladding?</h3>
+        <p>Yes. Our drones use <strong>deionised water with software-controlled spray pressure</strong> calibrated for each surface — glass, aluminium composite, stone, terracotta, and stucco. There is no abrasive scrubbing, no chemicals that etch glass coatings, and no risk of seal damage from pressurised rope-access washing. Deionised water dries streak-free with no residue.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What buildings in Manila can Skyline clean?</h3>
+        <p>Skyline cleans <strong>high-rise commercial towers, hotels, condominiums, hospitals, malls, government buildings, airport facades, oil and gas facilities, and industrial warehouses</strong> across Metro Manila — BGC, Makati, Ortigas, Quezon City, Pasig, Pasay, Mandaluyong, Alabang — and on contract anywhere in the Philippines. Operating ceiling: 160 metres.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you have a scaffolding alternative for facade cleaning?</h3>
+        <p>Yes — Skyline <strong>is</strong> the scaffolding alternative. We use autonomous rotor-driven cleaning drones that fly to the facade, spray deionised water, and return to base. No scaffolding rental, no permits to occupy sidewalks, no multi-week setup. A typical commercial tower is operational again the same day the cleaning starts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are Skyline drone pilots licensed in the Philippines?</h3>
+        <p>Yes. All Skyline pilots are <strong>CAAP-certified (Civil Aviation Authority of the Philippines)</strong> Remote Pilots, fully insured, and operating under valid commercial drone permits. We submit flight permits and risk assessments for every job and carry public-liability cover at every site.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does drone cleaning take on a typical Manila office tower?</h3>
+        <p>A 20-storey commercial tower (approximately 8,000 m² of facade) takes a Skyline drone crew <strong>2–4 days</strong> end-to-end, depending on weather windows. The same job by rope access typically takes 3–4 weeks. Skyline crews can also operate after-hours and on weekends to minimise tenant disruption.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can drones clean hotel facades without disturbing guests?</h3>
+        <p>Yes. Hotel facade cleaning is a Skyline specialty. Our drones operate quietly relative to high-pressure rope-access washers, and we can schedule flights during low-occupancy windows — typically mornings between 9 AM and noon. There is no scaffolding to obstruct views, no harnessed workers passing guest windows, and no extended occupancy of the building exterior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== 10. SAFETY ==================== -->
+
 <section class="safety" id="safety">
   <div class="container">
     <div class="fade-in">
