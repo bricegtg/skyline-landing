@@ -20,15 +20,15 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skyline Drones — Aerial Imaging & Inspection Division | Manila, Philippines</title>
+<title>About Skyline Drones — Manila's Drone Operator for Jobs Humans Shouldn't Do</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<meta name="description" content="Skyline Aerial Imaging & Inspection — remotely piloted aerial imaging for the Philippines. Real estate, construction progress, brand films, roof and facade inspection, events, and cinematic reels. CAAP-certified pilots, broadcast-grade payloads.">
-<meta property="og:title" content="Skyline Aerial Imaging & Inspection — Capture. Inspect. Deliver.">
-<meta property="og:description" content="From a single property cinematic to a documented construction record — every frame planned, flown, and graded by the same CAAP-certified crew.">
+<meta name="description" content="Skyline Drones is a Manila-based commercial drone operator running three divisions — facade cleaning, aerial firefighting, and aerial imaging & inspection — all flown by one CAAP-certified crew. Zero workers at height.">
+<meta property="og:title" content="About Skyline Drones — One Fleet. Three Divisions.">
+<meta property="og:description" content="Manila's drone operator for jobs humans shouldn't do. Facade cleaning, aerial firefighting, and aerial imaging & inspection under one safety and insurance umbrella.">
 <meta property="og:type" content="website">
 
 <style>
@@ -48,10 +48,14 @@
   --text-muted: #AAAAAA;
   --text-dim: #777777;
 
-  /* Aerial Imaging accents (azure) */
+  /* Firefighting accents */
+  --ember: #D9362B;
+  --ember-bright: #FF6B5A;
+  --ember-glow: rgba(217, 54, 43, 0.18);
+
+  /* Aerial Imaging accent (azure) */
   --azure: #3D6FB8;
   --azure-light: #5589CC;
-  --azure-glow: rgba(61, 111, 184, 0.18);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -94,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -106,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 32px;
   height: 2px;
-  background: var(--azure);
+  background: var(--ember);
 }
 
 .section-heading {
@@ -117,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-heading .gold { color: var(--gold); }
-.section-heading .azure { color: var(--azure-light); }
+.section-heading .ember { color: var(--ember-bright); }
 
 .section-subtitle {
   font-size: 16px;
@@ -127,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 8px;
 }
 .gold-text { color: var(--gold); }
-.azure-text { color: var(--azure-light); }
+.ember-text { color: var(--ember-bright); }
 
 .mono {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
@@ -162,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(61, 111, 184, 0.22);
+  border-bottom: 1px solid rgba(217, 54, 43, 0.22);
   transition: background 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
 
@@ -194,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-brand-tagline {
   font-size: 10px;
   letter-spacing: 0.05em;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   text-transform: uppercase;
 }
 
@@ -214,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-interactive);
   white-space: nowrap;
 }
-.nav-links a:hover { color: var(--azure-light); }
+.nav-links a:hover { color: var(--ember-bright); }
 .nav-links a.nav-firefighting { color: #D9362B; }
 .nav-links a.nav-firefighting:hover { color: #FF6B5A; }
 .nav-links a.nav-imaging { color: var(--azure); }
@@ -225,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-cta {
   display: inline-block;
   padding: 10px 22px;
-  background: var(--azure);
+  background: var(--ember);
   color: var(--white) !important;
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 12px;
@@ -237,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-cta:hover {
-  background: var(--azure-light);
+  background: var(--ember-bright);
   transform: translateY(-1px);
 }
 
@@ -291,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-interactive);
 }
 
-.mobile-menu a:hover { color: var(--azure-light); }
+.mobile-menu a:hover { color: var(--ember-bright); }
 .mobile-menu a.nav-firefighting { color: #D9362B; }
 .mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
 .mobile-menu a.nav-imaging { color: var(--azure); }
@@ -334,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   background:
     linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.95) 100%),
-    radial-gradient(ellipse at 65% 40%, rgba(61, 111, 184, 0.18), transparent 60%);
+    radial-gradient(ellipse at 65% 40%, rgba(217, 54, 43, 0.18), transparent 60%);
 }
 
 .hero-overlay::after {
@@ -368,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   margin-bottom: 28px;
   display: flex;
   align-items: center;
@@ -380,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 32px;
   height: 2px;
-  background: var(--azure);
+  background: var(--ember);
 }
 
 .hero h1 {
@@ -391,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 980px;
 }
 
-.hero h1 .azure { color: var(--azure-light); }
+.hero h1 .ember { color: var(--ember-bright); }
 
 .hero-subheadline {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
@@ -416,28 +420,28 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-.btn-azure {
+.btn-ember {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 14px 30px;
-  background: var(--azure);
+  background: var(--ember);
   color: var(--white);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 4px;
-  border: 2px solid var(--azure);
+  border: 2px solid var(--ember);
   transition: all var(--transition-interactive);
   cursor: pointer;
 }
 
-.btn-azure:hover {
-  background: var(--azure-light);
-  border-color: var(--azure-light);
+.btn-ember:hover {
+  background: var(--ember-bright);
+  border-color: var(--ember-bright);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(61, 111, 184, 0.35);
+  box-shadow: 0 8px 24px rgba(217, 54, 43, 0.35);
 }
 
 .btn-outline {
@@ -488,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
 .stat-number {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: clamp(28px, 3.6vw, 44px);
-  color: var(--azure-light);
+  color: var(--ember-bright);
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
@@ -520,7 +524,7 @@ h1, h2, h3, h4, h5, h6 {
 .who-callout {
   background: linear-gradient(180deg, var(--card-bg) 0%, #141414 100%);
   border: 1px solid var(--card-border);
-  border-left: 3px solid var(--azure);
+  border-left: 3px solid var(--ember);
   padding: 32px;
   border-radius: 4px;
 }
@@ -570,18 +574,18 @@ h1, h2, h3, h4, h5, h6 {
   top: 0; left: 0;
   width: 3px;
   height: 0;
-  background: var(--azure);
+  background: var(--ember);
   transition: height 0.4s var(--ease-out);
 }
 
-.pillar-card:hover { border-color: rgba(61, 111, 184, 0.35); }
+.pillar-card:hover { border-color: rgba(217, 54, 43, 0.35); }
 .pillar-card:hover::before { height: 100%; }
 
 .pillar-tag {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.22em;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -662,7 +666,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
   margin-bottom: 6px;
 }
@@ -708,7 +712,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .challenge-card h3 {
   font-size: 20px;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -738,14 +742,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-card:hover {
-  border-color: rgba(61, 111, 184, 0.35);
+  border-color: rgba(217, 54, 43, 0.35);
   transform: translateY(-2px);
 }
 
 .tech-spec {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 32px;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
@@ -796,7 +800,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--azure) 20%, var(--azure) 80%, transparent);
+  background: linear-gradient(90deg, transparent, var(--ember) 20%, var(--ember) 80%, transparent);
   opacity: 0.4;
   z-index: 0;
 }
@@ -813,8 +817,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 56px;
   border-radius: 50%;
   background: var(--bg-dark);
-  border: 2px solid var(--azure);
-  color: var(--azure-light);
+  border: 2px solid var(--ember);
+  color: var(--ember-bright);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 20px;
   display: flex;
@@ -857,16 +861,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .engagement-card:hover {
-  border-color: var(--azure);
+  border-color: var(--ember);
   transform: translateY(-2px);
 }
 
 .engagement-card .badge {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(61, 111, 184, 0.12);
-  border: 1px solid rgba(61, 111, 184, 0.3);
-  color: var(--azure-light);
+  background: rgba(217, 54, 43, 0.12);
+  border: 1px solid rgba(217, 54, 43, 0.3);
+  color: var(--ember-bright);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
   font-size: 10px;
   letter-spacing: 0.22em;
@@ -910,7 +914,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 17px;
   width: 12px;
   height: 1px;
-  background: var(--azure);
+  background: var(--ember);
 }
 
 /* ========== 11. COMPARISON ========== */
@@ -944,7 +948,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .comparison-table thead th:first-child { color: var(--text-muted); width: 38%; }
-.comparison-table thead th:nth-child(2) { color: var(--azure-light); width: 31%; }
+.comparison-table thead th:nth-child(2) { color: var(--ember-bright); width: 31%; }
 .comparison-table thead th:nth-child(3) { color: var(--text-dim); width: 31%; }
 
 .comparison-table tbody tr { border-bottom: 1px solid var(--card-border); }
@@ -982,7 +986,7 @@ h1, h2, h3, h4, h5, h6 {
 .safety-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-top: 3px solid var(--azure);
+  border-top: 3px solid var(--ember);
   padding: 32px 28px;
   border-radius: 2px;
 }
@@ -1037,7 +1041,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: border-color var(--transition-interactive);
 }
 
-.contact-method:hover { border-color: var(--azure); }
+.contact-method:hover { border-color: var(--ember); }
 
 .contact-method-label {
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
@@ -1097,14 +1101,14 @@ h1, h2, h3, h4, h5, h6 {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--azure);
+  border-color: var(--ember);
 }
 
 .form-group textarea { min-height: 130px; resize: vertical; }
 
 .form-group select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233D6FB8' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D9362B' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 18px;
@@ -1114,7 +1118,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-submit {
   width: 100%;
   padding: 16px 24px;
-  background: var(--azure);
+  background: var(--ember);
   border: none;
   color: var(--white);
   font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
@@ -1128,9 +1132,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-submit:hover {
-  background: var(--azure-light);
+  background: var(--ember-bright);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(61, 111, 184, 0.35);
+  box-shadow: 0 8px 24px rgba(217, 54, 43, 0.35);
 }
 
 .form-submit:disabled {
@@ -1199,7 +1203,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--azure-light);
+  color: var(--ember-bright);
   margin-bottom: 18px;
 }
 
@@ -1211,12 +1215,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-interactive);
 }
 
-.footer-col a:hover { color: var(--azure-light); }
+.footer-col a:hover { color: var(--ember-bright); }
 
 .footer-social { display: flex; gap: 12px; margin-top: 12px; }
 .footer-social a { padding: 0; }
 .footer-social svg { width: 22px; height: 22px; fill: var(--text-muted); transition: fill var(--transition-interactive); }
-.footer-social a:hover svg { fill: var(--azure-light); }
+.footer-social a:hover svg { fill: var(--ember-bright); }
 
 .footer-bottom {
   border-top: 1px solid var(--card-border);
@@ -1238,7 +1242,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%) translateY(120%);
-  background: var(--azure);
+  background: var(--ember);
   color: var(--white);
   padding: 16px 28px;
   border-radius: 4px;
@@ -1300,9 +1304,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
   }
   .comparison-table tbody td { border-bottom: none; padding: 6px 0; }
-  .comparison-table tbody td:first-child { color: var(--azure-light); margin-bottom: 6px; }
-  .comparison-table tbody td:nth-child(2)::before { content: 'Skyline Aerial: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; }
-  .comparison-table tbody td:nth-child(3)::before { content: 'Traditional Crew: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 6px; }
+  .comparison-table tbody td:first-child { color: var(--ember-bright); margin-bottom: 6px; }
+  .comparison-table tbody td:nth-child(2)::before { content: 'Skyline RPAS: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; }
+  .comparison-table tbody td:nth-child(3)::before { content: 'Trucks & Ladders: '; font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 6px; }
 }
 
 @media (max-width: 600px) {
@@ -1312,10 +1316,209 @@ h1, h2, h3, h4, h5, h6 {
   .form-row { grid-template-columns: 1fr; }
   .nav-brand-tagline { display: none; }
 }
+
+/* ========== ABOUT PAGE ADDITIONS ========== */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero h1 .gold { color: var(--gold); }
+
+.btn-gold {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: background var(--transition-interactive), transform var(--transition-interactive), box-shadow var(--transition-interactive);
+}
+.btn-gold:hover {
+  background: var(--dark-gold);
+  border-color: var(--dark-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 184, 75, 0.25);
+}
+
+/* Three-vertical card grid */
+.verticals { padding: 100px 0; }
+.verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+}
+.vertical-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-interactive), border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+}
+.vertical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.vertical-media {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.vertical-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease-out);
+}
+.vertical-card:hover .vertical-media img { transform: scale(1.06); }
+.vertical-media.gold-fallback {
+  background: linear-gradient(135deg, #2a2310 0%, #4a3a12 60%, #6b521a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vertical-media .vertical-mark {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.vertical-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.55), transparent 60%);
+}
+.vertical-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-top: 3px solid var(--card-border);
+}
+.vertical-card.accent-gold .vertical-body { border-top-color: var(--gold); }
+.vertical-card.accent-ember .vertical-body { border-top-color: var(--ember); }
+.vertical-card.accent-azure .vertical-body { border-top-color: var(--azure); }
+.vertical-body h3 {
+  font-size: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+}
+.vertical-card.accent-gold .vertical-body h3 { color: var(--gold); }
+.vertical-card.accent-ember .vertical-body h3 { color: var(--ember-bright); }
+.vertical-card.accent-azure .vertical-body h3 { color: var(--azure-light); }
+.vertical-body p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Outline accent buttons */
+.btn-outline-gold, .btn-outline-ember, .btn-outline-azure {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 11px 24px;
+  background: transparent;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 2px solid;
+  cursor: pointer;
+  transition: background var(--transition-interactive), color var(--transition-interactive), transform var(--transition-interactive);
+}
+.btn-outline-gold { color: var(--gold); border-color: var(--gold); }
+.btn-outline-gold:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
+.btn-outline-ember { color: var(--ember-bright); border-color: var(--ember); }
+.btn-outline-ember:hover { background: var(--ember); color: var(--white); transform: translateY(-2px); }
+.btn-outline-azure { color: var(--azure-light); border-color: var(--azure); }
+.btn-outline-azure:hover { background: var(--azure); color: var(--white); transform: translateY(-2px); }
+
+/* Pillar accent override for gold on this page */
+.pillar-card:hover { border-color: rgba(232, 184, 75, 0.35); }
+
+/* Who We Serve tag band */
+.serve { padding: 100px 0; background: var(--black); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
+.serve-heading {
+  font-size: clamp(22px, 3vw, 34px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  max-width: 760px;
+  margin: 16px 0 40px;
+}
+.tag-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.tag-band span {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 40px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  transition: border-color var(--transition-interactive), color var(--transition-interactive);
+}
+.tag-band span:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Contact CTA strip */
+.cta-strip {
+  padding: 110px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(232,184,75,0.08), transparent 70%),
+    var(--bg-dark);
+}
+.cta-strip h2 {
+  font-size: clamp(28px, 4.5vw, 48px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.cta-strip p {
+  color: var(--text-muted);
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+/* About-page step accent in gold */
+.steps::before { background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent); }
+.step-number { border-color: var(--gold); color: var(--gold); }
+.steps { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 960px) {
+  .verticals-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
-
 <!-- ==================== 1. NAVBAR ==================== -->
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
@@ -1323,7 +1526,7 @@ h1, h2, h3, h4, h5, h6 {
       <img src="logo-light.png" alt="Skyline Drones logo" width="120" height="40">
       <div class="nav-brand-text">
         <span class="nav-brand-name">Skyline Drones</span>
-        <span class="nav-brand-tagline">Aerial Imaging & Inspection Division</span>
+        <span class="nav-brand-tagline">Skyline Drones — Manila, Philippines</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -1331,7 +1534,7 @@ h1, h2, h3, h4, h5, h6 {
       <li><a href="/" class="nav-cleaning">Cleaning</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
       <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
-      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -1344,495 +1547,217 @@ h1, h2, h3, h4, h5, h6 {
   <a href="/" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
   <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
-  <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
+  <a href="/#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
-  <div class="hero-bg">
-    <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
-  </div>
+  <video class="hero-video" autoplay muted loop playsinline poster="firefighting-hero.jpg">
+    <source src="hero-bg.mp4" type="video/mp4">
+  </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-breadcrumb fade-in">Aerial Imaging & Inspection Division</p>
-    <h1 class="fade-in fade-in-delay-1">CAPTURE. <span class="azure">INSPECT.</span> DELIVER.</h1>
-    <p class="hero-subheadline fade-in fade-in-delay-2">REMOTELY PILOTED AERIAL IMAGING FOR THE PHILIPPINES.</p>
+    <p class="hero-breadcrumb fade-in">About Skyline Drones</p>
+    <h1 class="fade-in fade-in-delay-1">MANILA'S DRONE OPERATOR FOR <span class="gold">JOBS HUMANS SHOULDN'T DO.</span></h1>
+    <p class="hero-subheadline fade-in fade-in-delay-2">WITHOUT A SINGLE WORKER LEAVING THE GROUND.</p>
     <p class="hero-subtitle fade-in fade-in-delay-3">
-      From a single property cinematic to a documented construction record — every frame planned, flown, and graded by the same CAAP-certified crew. Real estate. Construction. Brand. Inspection. Events. Cinematic reels.
+      Skyline Drones is a Manila-based commercial drone operator built around one principle — every job at height should be done by a machine, not a human. We operate three divisions: facade cleaning, aerial firefighting, and aerial imaging & inspection — all flown by the same CAAP-certified crew, under one safety and insurance umbrella.
     </p>
     <div class="hero-buttons fade-in fade-in-delay-4">
-      <a href="#contact" class="btn-azure">Contact Us</a>
-      <a href="#services" class="btn-outline">View Services</a>
+      <a href="#verticals" class="btn-gold">Our Divisions</a>
+      <a href="#contact" class="btn-outline">Contact Us</a>
     </div>
   </div>
 </section>
 
 <!-- ==================== 3. STATS BAR ==================== -->
-<section class="stats-bar">
+<section class="stats-bar" id="stats">
   <div class="stats-grid">
     <div class="stat-item fade-in">
-      <div class="stat-number">4K | 8K</div>
-      <div class="stat-label">Capture Resolution</div>
+      <div class="stat-number">Zero</div>
+      <div class="stat-label">Workers at height</div>
     </div>
     <div class="stat-item fade-in fade-in-delay-1">
-      <div class="stat-number">30 fps</div>
-      <div class="stat-label">Smooth Aerial Motion</div>
+      <div class="stat-number">160 m</div>
+      <div class="stat-label">Maximum altitude</div>
     </div>
     <div class="stat-item fade-in fade-in-delay-2">
-      <div class="stat-number">CAAP-Certified</div>
-      <div class="stat-label">Pilots &amp; Airframes</div>
+      <div class="stat-number">CAAP-certified</div>
+      <div class="stat-label">Pilots & airframes</div>
     </div>
     <div class="stat-item fade-in fade-in-delay-3">
-      <div class="stat-number">Manila + Nationwide</div>
-      <div class="stat-label">Coverage</div>
+      <div class="stat-number">Fully insured</div>
+      <div class="stat-label">Third-party liability</div>
     </div>
   </div>
 </section>
 
 <!-- ==================== 4. WHO WE ARE ==================== -->
-<section class="who-we-are" id="about">
+<section class="who-we-are" id="who">
   <div class="container">
-    <div class="fade-in">
-      <p class="section-label">The Division</p>
-      <h2 class="section-heading">ONE AIRCRAFT. <span class="azure">EVERY ANGLE.</span></h2>
-    </div>
+    <p class="section-label fade-in">The Company</p>
+    <h2 class="section-heading fade-in">BUILT FOR <span class="gold">EVERY HEIGHT.</span></h2>
     <div class="who-grid">
-      <div class="who-description fade-in fade-in-delay-1">
-        <p>Skyline's Aerial Imaging & Inspection division covers the full spread of remotely piloted aerial work: real estate aerials, construction progress records, brand and marketing films, roof and facade inspection, events and venues, and cinematic reels. One broadcast-grade airframe family, configured to the brief.</p>
-        <p>It is flown by the same pilot crew that flies our cleaning and firefighting operations. On a single mobilisation, one operator can deliver multiple outputs — an establishing cinematic, a defect-mapped facade survey, and a stills package — without a second visit or a second invoice.</p>
-        <p>Manila-based, nationwide on request. Every flight is CAAP-certified, airspace-cleared, and fully insured — the same operational discipline that scales drones up the sides of 55-storey towers, pointed at your story instead of a fire.</p>
+      <div class="who-description fade-in">
+        <p>Skyline Drones was founded in Manila to solve a single, stubborn problem — the human cost of working at height. In the Philippines, facade cleaning, fire response, and aerial inspection all still rely on workers suspended from ropes, balanced on scaffolding, or hanging from helicopter skids. Each of those is a death waiting to happen, and every operator who has done this work long enough has seen it.</p>
+        <p>We replaced the worker, not the work. Three commercial drone divisions, one CAAP-certified pilot crew, one operations and insurance umbrella. The result is faster turnaround, lower liability, and zero workers leaving the ground.</p>
+        <p>We operate across Metro Manila first, and nationwide on request. Every flight is logged, every airspace clearance is filed, and every job is documented end-to-end.</p>
       </div>
-      <div class="who-callout fade-in fade-in-delay-2">
-        <h3>One Crew, Multiple Outputs</h3>
-        <p>From a completed development in BGC to a refinery facade survey in Bataan, the same crew, the same airframe, and the same single mobilisation can deliver a marketing reel, an inspection report, and a stills set in one visit — broadcast-grade capture and engineering-grade detail from a single flight day.</p>
+      <div class="who-callout fade-in fade-in-delay-1">
+        <h3>One Principle</h3>
+        <p>Every job at height should be done by a machine, not a human. We engineer each division around that single commitment — and the safety, insurance, and documentation that make it real.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 5. REACH. RESPOND. PROTECT. ==================== -->
-<section class="pillars">
+<!-- ==================== 5. THREE VERTICALS ==================== -->
+<section class="verticals" id="verticals">
   <div class="container">
-    <div class="fade-in">
-      <p class="section-label">Why Skyline Imaging</p>
-      <h2 class="section-heading">CAPTURE. <span class="azure">INSPECT.</span> DELIVER.</h2>
+    <p class="section-label fade-in">Three Divisions</p>
+    <h2 class="section-heading fade-in">ONE FLEET. <span class="gold">THREE DIVISIONS.</span></h2>
+    <div class="verticals-grid">
+      <div class="vertical-card accent-gold fade-in">
+        <div class="vertical-media gold-fallback">
+          <span class="vertical-mark">Facade Cleaning</span>
+        </div>
+        <div class="vertical-body">
+          <h3>Facade Cleaning</h3>
+          <p>Drone-powered cleaning for every commercial surface — glass, stone, metal, terracotta, concrete, aluminium. Up to 160 metres, without a single worker at height. Purified water, calibrated pressure, RTK station-hold.</p>
+          <a href="/" class="btn-outline-gold">Explore Cleaning &rarr;</a>
+        </div>
+      </div>
+      <div class="vertical-card accent-ember fade-in fade-in-delay-1">
+        <div class="vertical-media">
+          <img src="firefighting-hero.jpg" alt="Industrial firefighting drone above a Manila high-rise at night">
+        </div>
+        <div class="vertical-body">
+          <h3>Aerial Firefighting</h3>
+          <p>Industrial firefighting RPAS for high-rise, refinery, warehouse, and wildland response. 500 L payload, 500 m reach, 4-minute deployment. Built to fly alongside the BFP and LGU command protocols.</p>
+          <a href="/firefighting.html" class="btn-outline-ember">Explore Firefighting &rarr;</a>
+        </div>
+      </div>
+      <div class="vertical-card accent-azure fade-in fade-in-delay-2">
+        <div class="vertical-media">
+          <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
+        </div>
+        <div class="vertical-body">
+          <h3>Aerial Imaging & Inspection</h3>
+          <p>Real estate aerials, construction progress, brand films, roof & facade inspection, events, and cinematic reels. Same airframe family, same CAAP-certified crew, broadcast-grade output.</p>
+          <a href="/imaging.html" class="btn-outline-azure">Explore Imaging &rarr;</a>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ==================== 6. WHY SKYLINE ==================== -->
+<section class="pillars" id="why">
+  <div class="container">
+    <p class="section-label fade-in">Why Skyline</p>
+    <h2 class="section-heading fade-in">ONE CREW. <span class="gold">ONE SAFETY UMBRELLA.</span></h2>
     <div class="pillars-grid">
       <div class="pillar-card fade-in">
-        <div class="pillar-tag">Capture</div>
-        <h3>Broadcast-Grade Sensors</h3>
-        <p>4K and 8K stills, 30fps motion, full-frame dynamic range, stable in wind. The same vantage point a helicopter charges $15k+ an hour for — delivered at a fraction of the cost, with frame-accurate planning.</p>
+        <span class="pillar-tag">01</span>
+        <h3>Shared Pilot Crew</h3>
+        <p>Every flight, across every division, is operated by the same CAAP-certified pilot crew. One safety culture, one operational standard, one accountability chain.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-1">
-        <div class="pillar-tag">Inspect</div>
-        <h3>Sub-Centimetre Detail</h3>
-        <p>Defect-level resolution on roofs, facades, and structural members. Thermal optional. Defect-mapped orthomosaics built for engineers, insurers, and asset owners — not just for the brochure.</p>
+        <span class="pillar-tag">02</span>
+        <h3>Full Insurance & Compliance</h3>
+        <p>Third-party aviation liability filed for every flight. CAAP airspace clearance pre-cleared before every job. Audit-ready documentation on request.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-2">
-        <div class="pillar-tag">Deliver</div>
-        <h3>On Schedule, Graded</h3>
-        <p>Same-day proxies, final cut colour-graded to your brand and delivered on the agreed window. Tight turnaround for marketing campaigns, investor decks, insurance claims, and construction records.</p>
+        <span class="pillar-tag">03</span>
+        <h3>Multi-Service Mobilizations</h3>
+        <p>One mobilization, multiple outputs. Send the crew once and capture cleaning records, inspection orthomosaics, and marketing aerials in a single visit.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 6. EVERY FIRE SCENARIO ==================== -->
-<section class="scenarios" id="services">
+<!-- ==================== 7. WHO WE SERVE ==================== -->
+<section class="serve" id="serve">
   <div class="container">
-    <div class="scenarios-intro fade-in">
-      <p class="section-label">Service Lines</p>
-      <h2 class="section-heading">ONE FLEET. <span class="azure">SIX BRIEFS.</span></h2>
-      <p>From a single property cinematic to a documented construction record — every frame planned, flown, and graded by the same CAAP-certified crew.</p>
-    </div>
-    <div class="scenarios-grid">
-      <div class="scenario-tile fade-in">
-        <img src="imaging-realestate.jpg" alt="Aerial real estate photography of a Philippine property">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">01</div>
-          <h4>Real Estate Aerials</h4>
-        </div>
-      </div>
-      <div class="scenario-tile fade-in fade-in-delay-1">
-        <img src="imaging-construction.jpg" alt="Aerial construction site progress documentation">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">02</div>
-          <h4>Construction Progress</h4>
-        </div>
-      </div>
-      <div class="scenario-tile fade-in fade-in-delay-2">
-        <img src="imaging-cinematic.jpg" alt="Cinematic aerial brand film capture">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">03</div>
-          <h4>Brand &amp; Marketing Films</h4>
-        </div>
-      </div>
-      <div class="scenario-tile fade-in fade-in-delay-3">
-        <img src="imaging-inspection.jpg" alt="Drone roof and facade inspection close-up">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">04</div>
-          <h4>Roof &amp; Facade Inspection</h4>
-        </div>
-      </div>
-      <div class="scenario-tile fade-in">
-        <img src="imaging-event.jpg" alt="Aerial coverage of an event venue">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">05</div>
-          <h4>Events &amp; Venues</h4>
-        </div>
-      </div>
-      <div class="scenario-tile fade-in fade-in-delay-1">
-        <img src="imaging-equipment.jpg" alt="Broadcast-grade drone imaging equipment">
-        <div class="scenario-meta">
-          <div class="scenario-meta-tag">06</div>
-          <h4>Cinematic Reels</h4>
-        </div>
-      </div>
+    <p class="section-label fade-in">Who We Serve</p>
+    <h2 class="serve-heading fade-in">WE SERVE THE PHILIPPINES' MOST DEMANDING ASSETS</h2>
+    <div class="tag-band fade-in fade-in-delay-1">
+      <span>Commercial Towers</span>
+      <span>Hotels</span>
+      <span>Government</span>
+      <span>Airports</span>
+      <span>Oil & Gas</span>
+      <span>Industrial & Warehouse</span>
+      <span>Public Infrastructure</span>
+      <span>Real Estate Developments</span>
+      <span>Stadiums</span>
+      <span>Heritage Buildings</span>
     </div>
   </div>
 </section>
 
-<!-- ==================== 7. THE CHALLENGE ==================== -->
-<section class="challenge">
-  <div class="container">
-    <div class="fade-in">
-      <p class="section-label">Why Not a Crane or Helicopter</p>
-      <h2 class="section-heading">ALTITUDE IS AN <span class="azure">ANGLE NO CRANE CAN REACH.</span></h2>
-    </div>
-    <div class="challenge-grid">
-      <div class="challenge-card fade-in">
-        <div class="mono-number">Constraint 01</div>
-        <h3>Too High for a Jib</h3>
-        <p>The decisive frame almost always sits between thirty and one hundred and sixty metres — well above the reach of any crane or jib. The establishing shot lives in air a ground rig simply cannot put a camera into.</p>
-      </div>
-      <div class="challenge-card fade-in fade-in-delay-1">
-        <div class="mono-number">Constraint 02</div>
-        <h3>Too Expensive for a Helicopter</h3>
-        <p>That same band is too low and too costly for a manned helicopter. Charter rates, mobilisation, and airspace overhead price most projects out of the aerial they actually need. A drone lives precisely in that gap.</p>
-      </div>
-      <div class="challenge-card fade-in fade-in-delay-2">
-        <div class="mono-number">Constraint 03</div>
-        <h3>Impossible from the Street</h3>
-        <p>From the ground, the context, the scale, and the geometry of a project never quite resolve. Lift the camera into the gap a drone owns and the establishing shot, the context, and the scale of the project finally make sense.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 8. TECHNOLOGY ==================== -->
-<section class="technology" id="technology">
-  <div class="container">
-    <div class="fade-in">
-      <p class="section-label">The Airframe</p>
-      <h2 class="section-heading">BROADCAST-GRADE PAYLOAD. <span class="azure">CAAP-CLEARED PILOTS.</span></h2>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-card fade-in">
-        <div class="tech-spec">30–160m</div>
-        <div class="tech-label">Altitude Ceiling</div>
-        <h3>The Angle Gap</h3>
-        <p>Operates in the thirty-to-one-hundred-and-sixty-metre band a single crane or jib physically can't reach — exactly where the establishing shot and the project's true scale live.</p>
-      </div>
-      <div class="tech-card fade-in fade-in-delay-1">
-        <div class="tech-spec">4K / 60fps</div>
-        <div class="tech-label">Sensors</div>
-        <h3>Stabilised Capture</h3>
-        <p>4K / 60fps capture or 8K stills on a stabilised gimbal, graded to your brand palette. Full-frame dynamic range, smooth motion, sharp in wind.</p>
-      </div>
-      <div class="tech-card fade-in fade-in-delay-2">
-        <div class="tech-spec">Cleared</div>
-        <div class="tech-label">Operations</div>
-        <h3>Filed Before Every Flight</h3>
-        <p>CAAP airspace clearance and full insurance filed before every flight. The property owner is briefed; the airspace is scoped; the crew is staged.</p>
-      </div>
-      <div class="tech-card fade-in">
-        <div class="tech-spec">Same-Day</div>
-        <div class="tech-label">Delivery</div>
-        <h3>Proxies to Final Grade</h3>
-        <p>Same-day proxies so you can review on the shoot day. Final colour grade and reel delivered within the agreed window — marketing, decks, claims, or records.</p>
-      </div>
-      <div class="tech-card fade-in fade-in-delay-1">
-        <div class="tech-spec">Nationwide</div>
-        <div class="tech-label">Coverage</div>
-        <h3>Manila First, PH-Wide</h3>
-        <p>Manila-based for fast turnaround in Metro Manila, with nationwide deployment on request — from Bataan refineries to provincial developments.</p>
-      </div>
-      <div class="tech-card fade-in fade-in-delay-2">
-        <div class="tech-spec">Thermal</div>
-        <div class="tech-label">Inspection Payload</div>
-        <h3>Defect-Mapped Surveys</h3>
-        <p>Optional thermal and sub-centimetre optical inspection payloads produce defect-mapped orthomosaics for engineers, insurers, and asset owners.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 9. HOW IT WORKS ==================== -->
+<!-- ==================== 8. HOW WE WORK ==================== -->
 <section class="how-it-works" id="how-it-works">
   <div class="container">
-    <div class="fade-in">
-      <p class="section-label">Operational Sequence</p>
-      <h2 class="section-heading">HOW A <span class="azure">SHOOT</span> UNFOLDS</h2>
-    </div>
+    <p class="section-label fade-in">How We Work</p>
+    <h2 class="section-heading fade-in">FOUR STEPS. <span class="gold">ONE CREW.</span></h2>
     <div class="steps">
       <div class="step fade-in">
         <div class="step-number">1</div>
         <h3>Brief</h3>
-        <p>A short call. The goal of the shoot, the deliverables, the location, the date, and any sensitivities — captured in one conversation.</p>
+        <p>A short call to scope the job — cleaning, firefighting, or imaging. Goal, location, timeline, sensitivities.</p>
       </div>
       <div class="step fade-in fade-in-delay-1">
         <div class="step-number">2</div>
-        <h3>Flight Plan</h3>
-        <p>We file the CAAP clearance, scope the airspace, brief the property owner, and stage the crew — so the shoot day is purely about the shot.</p>
+        <h3>Plan</h3>
+        <p>We file CAAP airspace clearance, brief the property owner, stage the crew, and confirm insurance.</p>
       </div>
       <div class="step fade-in fade-in-delay-2">
         <div class="step-number">3</div>
-        <h3>Shoot</h3>
-        <p>One crew, one airframe, one mobilisation. Multiple angles and multiple resolutions captured in a single visit.</p>
+        <h3>Fly</h3>
+        <p>One crew, one airframe family, one mobilization. Multiple divisions if needed in a single visit.</p>
       </div>
       <div class="step fade-in fade-in-delay-3">
         <div class="step-number">4</div>
-        <h3>Edit &amp; Grade</h3>
-        <p>Same-day proxies for review. The final cut is colour-graded to your brand and delivered on schedule.</p>
-      </div>
-      <div class="step fade-in fade-in-delay-4">
-        <div class="step-number">5</div>
         <h3>Deliver</h3>
-        <p>Final files in the formats you need — 4K master, social cutdowns, stills, or a full inspection report.</p>
+        <p>Documented flight logs, completion record, deliverables on schedule. Audit-ready.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== 10. ENGAGEMENT MODEL ==================== -->
-<section class="engagement">
+<!-- ==================== 9. CONTACT CTA STRIP ==================== -->
+<section class="cta-strip" id="contact">
   <div class="container">
-    <div class="fade-in">
-      <p class="section-label">How We Work With You</p>
-      <h2 class="section-heading">THREE WAYS TO <span class="azure">ENGAGE THE CREW</span></h2>
-      <p class="section-subtitle">From a one-off listing capture to a fully embedded production partnership — pick the model that fits the brief, the cadence, and the budget.</p>
-    </div>
-    <div class="engagement-grid">
-      <div class="engagement-card fade-in">
-        <h3>Single Shoot</h3>
-        <p>One-off project capture — a real estate listing, a completed development, or event coverage. Fixed brief, fixed deliverables, fixed quote, no surprises.</p>
-        <ul>
-          <li>One mobilisation, one flight day</li>
-          <li>Multiple angles &amp; resolutions</li>
-          <li>Same-day proxies</li>
-          <li>Graded final cut &amp; stills</li>
-        </ul>
-      </div>
-      <div class="engagement-card fade-in fade-in-delay-1">
-        <h3>Retainer</h3>
-        <p>Recurring shoots on a schedule — quarterly facade inspection, monthly construction progress, or a periodic marketing refresh. One brief, predictable pricing.</p>
-        <ul>
-          <li>Scheduled, repeatable shoots</li>
-          <li>Consistent angles over time</li>
-          <li>Progress &amp; inspection records</li>
-          <li>Predictable monthly pricing</li>
-        </ul>
-      </div>
-      <div class="engagement-card fade-in fade-in-delay-2">
-        <h3>Production Partnership</h3>
-        <p>Embedded with your marketing or engineering team — full creative direction, multi-shoot campaigns, and white-labelled delivery to your own clients.</p>
-        <ul>
-          <li>Full creative direction</li>
-          <li>Multi-shoot campaigns</li>
-          <li>White-labelled delivery</li>
-          <li>Priority crew scheduling</li>
-        </ul>
-      </div>
+    <h2 class="fade-in">READY TO ELEVATE THE WORK?</h2>
+    <p class="fade-in fade-in-delay-1">Whether the brief is a 50-story tower wash, a refinery response readiness programme, or a cinematic property reel — we deliver the work without putting a single worker at height, and without weeks of scaffolding or rope access.</p>
+    <div class="fade-in fade-in-delay-2">
+      <a href="/#contact" class="btn-gold">Contact Us</a>
     </div>
   </div>
 </section>
 
-<!-- ==================== 11. COMPARISON ==================== -->
-<section class="comparison">
-  <div class="container">
-    <div class="fade-in">
-      <p class="section-label">Capability Comparison</p>
-      <h2 class="section-heading">SKYLINE AERIAL <span class="azure">VS.</span> A TRADITIONAL PHOTO CREW</h2>
-    </div>
-    <table class="comparison-table fade-in fade-in-delay-1">
-      <thead>
-        <tr>
-          <th>Capability</th>
-          <th>Skyline Aerial</th>
-          <th>Traditional Photo Crew</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Setup</td>
-          <td>30–60 minutes on site</td>
-          <td>Cranes, jibs, road permits — half a day</td>
-        </tr>
-        <tr>
-          <td>Altitude</td>
-          <td>30 to 160 m, any angle</td>
-          <td>Ground-bound or fixed jib height</td>
-        </tr>
-        <tr>
-          <td>Aerial Cost</td>
-          <td>No helicopter charter</td>
-          <td>₱150k+ per helicopter hour</td>
-        </tr>
-        <tr>
-          <td>Delivery</td>
-          <td>Same-day proxies, graded reel on schedule</td>
-          <td>Days of post and re-shoots</td>
-        </tr>
-        <tr>
-          <td>Compliance</td>
-          <td>CAAP-cleared, fully insured</td>
-          <td>Variable, often uninsured for airspace</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ==================== 12. SAFETY & COMPLIANCE ==================== -->
-<section class="safety" id="safety">
-  <div class="container">
-    <div class="fade-in">
-      <p class="section-label">Cleared to Fly</p>
-      <h2 class="section-heading">CAAP-CERTIFIED. <span class="azure">FULLY INSURED.</span></h2>
-    </div>
-    <div class="safety-grid">
-      <div class="safety-card fade-in">
-        <h3>Airspace Clearance</h3>
-        <p>CAAP airspace clearance is filed before every flight and briefed to the property owner — no surprise drones overhead, no compliance gaps.</p>
-      </div>
-      <div class="safety-card fade-in fade-in-delay-1">
-        <h3>Aviation Liability Cover</h3>
-        <p>Third-party aviation liability insurance on every flight, naming the client where required. Documentation provided before the shoot.</p>
-      </div>
-      <div class="safety-card fade-in fade-in-delay-2">
-        <h3>Every Flight Logged</h3>
-        <p>Pre-flight, in-flight, and post-flight records are kept for every sortie and shared on request — a full audit trail for the shoot.</p>
-      </div>
-      <div class="safety-card fade-in">
-        <h3>Sensitive-Area Protocol</h3>
-        <p>Established procedures for government, embassy, event, and restricted-airspace operations — we know where we can and cannot fly.</p>
-      </div>
-      <div class="safety-card fade-in fade-in-delay-1">
-        <h3>Certified Pilots</h3>
-        <p>Every shoot is flown by a CAAP-certified Remote Pilot in Command, with a visual observer on every high-complexity sortie.</p>
-      </div>
-      <div class="safety-card fade-in fade-in-delay-2">
-        <h3>Property-Owner Briefed</h3>
-        <p>Building managers and property owners are briefed and consented before the crew arrives — clearance secured, expectations set.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 13. CAPABILITY BRIEFING ==================== -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-header fade-in">
-      <p class="section-label">Request a Brief</p>
-      <h2 class="section-heading">TELL US THE STORY. <span class="azure">WE'LL FIND THE ANGLE.</span></h2>
-      <p class="contact-subtitle">Book a free 30-minute call — we scope the shot list, check airspace clearance, and give you a no-obligation quote against your current production cost.</p>
-    </div>
-
-    <div class="contact-methods fade-in fade-in-delay-1">
-      <a href="mailto:skylinedrones.ph@gmail.com" class="contact-method">
-        <div class="contact-method-label">Email</div>
-        <div class="contact-method-value">skylinedrones.ph@gmail.com</div>
-      </a>
-      <a href="tel:+639171480498" class="contact-method">
-        <div class="contact-method-label">Phone</div>
-        <div class="contact-method-value">+63 917 148 0498</div>
-      </a>
-      <div class="contact-method">
-        <div class="contact-method-label">Location</div>
-        <div class="contact-method-value">Manila, Philippines</div>
-      </div>
-    </div>
-
-    <form class="contact-form fade-in" id="contactForm" onsubmit="handleSubmit(event)">
-      <input type="hidden" name="_subject" value="Aerial Imaging & Inspection — new brief">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="inquiry_type" value="Aerial Imaging & Inspection Brief">
-      <input type="text" name="_honey" style="display:none">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your full name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
-        </div>
-        <div class="form-group">
-          <label for="project_type">Project Type</label>
-          <select id="project_type" name="project_type" required>
-            <option value="">Select project type</option>
-            <option value="Real Estate Aerials">Real Estate Aerials</option>
-            <option value="Construction Progress">Construction Progress</option>
-            <option value="Brand & Marketing Film">Brand &amp; Marketing Film</option>
-            <option value="Roof & Facade Inspection">Roof &amp; Facade Inspection</option>
-            <option value="Events & Venues">Events &amp; Venues</option>
-            <option value="Cinematic Reel">Cinematic Reel</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group full-width">
-          <label for="organisation">Company / Project</label>
-          <input type="text" id="organisation" name="organisation" placeholder="e.g. Ayala Land, BGC tower listing, Bataan refinery survey">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group full-width">
-          <label for="message">Tell us about your project</label>
-          <textarea id="message" name="message" placeholder="What are we shooting, where, and when? Deliverables, location, date, and any sensitivities — e.g. a cinematic reel for a BGC development, quarterly facade inspection, or event coverage in Cebu."></textarea>
-        </div>
-      </div>
-      <button type="submit" class="form-submit">Contact Us</button>
-    </form>
-
-    <a href="https://wa.me/639171480498" target="_blank" rel="noopener noreferrer" class="whatsapp-btn fade-in">
-      <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-      Message Us on WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- ==================== 14. FOOTER ==================== -->
+<!-- ==================== 10. FOOTER ==================== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="logo-light.png" alt="Skyline Drones">
         <div class="footer-brand-name">Skyline Drones</div>
-        <p>Aerial Imaging & Inspection Division — remotely piloted aerial imaging for the Philippines. Capture. Inspect. Deliver.</p>
+        <p>Manila-based commercial drone operator — facade cleaning, aerial firefighting, and aerial imaging & inspection. One CAAP-certified crew. Zero workers at height.</p>
       </div>
       <div class="footer-col">
         <h4>Divisions</h4>
         <a href="/">Facade Cleaning</a>
         <a href="/firefighting.html">Firefighting RPAS</a>
-        <a href="/imaging.html">Aerial Imaging &amp; Inspection</a>
+        <a href="/imaging.html">Aerial Imaging & Inspection</a>
       </div>
       <div class="footer-col">
-        <h4>Imaging</h4>
-        <a href="#services">Services</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#safety">Safety &amp; Compliance</a>
-        <a href="#contact">Request a Brief</a>
+        <h4>Company</h4>
+        <a href="/about.html#who">Who We Are</a>
+        <a href="/about.html#verticals">Our Divisions</a>
+        <a href="/about.html#why">Why Skyline</a>
+        <a href="/#contact">Contact Us</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
@@ -1849,13 +1774,10 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Skyline Drones &middot; Aerial Imaging & Inspection Division &middot; Manila, Philippines</p>
+      <p>&copy; 2026 Skyline Drones &middot; Manila, Philippines</p>
     </div>
   </div>
 </footer>
-
-<!-- Toast notification -->
-<div class="toast" id="toast">Brief received. Our team will be in touch.</div>
 
 <script>
 // ========== MOBILE NAV ==========
@@ -1893,44 +1815,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 fadeElements.forEach(el => observer.observe(el));
-
-// ========== FORM HANDLER ==========
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const originalText = btn.textContent;
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  const formData = new FormData(form);
-
-  fetch('https://formsubmit.co/ajax/skylinedrones.ph@gmail.com', {
-    method: 'POST',
-    headers: { 'Accept': 'application/json' },
-    body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    form.reset();
-    setTimeout(() => toast.classList.remove('show'), 4000);
-  })
-  .catch(error => {
-    const toast = document.getElementById('toast');
-    toast.textContent = 'Something went wrong. Please try WhatsApp or email us directly.';
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.textContent = 'Briefing request received. Our team will be in touch.';
-      toast.classList.remove('show');
-    }, 4000);
-  })
-  .finally(() => {
-    btn.textContent = originalText;
-    btn.disabled = false;
-  });
-}
 
 // ========== SMOOTH SCROLL OFFSET ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
