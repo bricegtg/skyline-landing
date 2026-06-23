@@ -1316,6 +1316,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========== ABOUT PAGE ADDITIONS ========== */
+.hero { background: #000; }
 .hero-video {
   position: absolute;
   top: 0;
@@ -1324,7 +1325,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
 }
+.hero-video.is-ready { opacity: 1; }
 
 .hero h1 .gold { color: var(--gold); }
 
@@ -1764,7 +1768,7 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="firefighting-hero.jpg">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
     <source src="hero-bg.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -1773,7 +1777,7 @@ h1, h2, h3, h4, h5, h6 {
     <h1 class="fade-in fade-in-delay-1">MANILA'S DRONE OPERATOR FOR <span class="gold">JOBS HUMANS SHOULDN'T DO.</span></h1>
     <p class="hero-subheadline fade-in fade-in-delay-2">WITHOUT A SINGLE WORKER LEAVING THE GROUND.</p>
     <p class="hero-subtitle fade-in fade-in-delay-3">
-      Skyline Drones is the Philippines' specialist in drone-powered <strong>commercial building cleaning</strong>, <strong>high-rise facade cleaning</strong>, aerial firefighting, and aerial inspection. We operate three divisions — all flown by the same CAAP-certified crew, under one safety and insurance umbrella. Every job at height done by a machine, not a human.
+      Skyline Drones is the Philippines' specialist in drone-powered <strong>commercial building cleaning</strong>, <strong>high-rise facade cleaning</strong>, aerial firefighting, and aerial inspection. We operate three divisions — all flown by the same CAAP-certified crew, under one safety and insurance umbrella.
     </p>
     <div class="hero-buttons fade-in fade-in-delay-4">
       <a href="#verticals" class="btn-gold">Our Divisions</a>
@@ -1811,13 +1815,13 @@ h1, h2, h3, h4, h5, h6 {
     <h2 class="section-heading fade-in">BUILT FOR <span class="gold">EVERY HEIGHT.</span></h2>
     <div class="who-grid">
       <div class="who-description fade-in">
-        <p>Skyline Drones was founded in Manila to solve a single, stubborn problem — the human cost of working at height. In the Philippines, facade cleaning, fire response, and aerial inspection all still rely on workers suspended from ropes, balanced on scaffolding, or hanging from helicopter skids. Each of those is a death waiting to happen, and every operator who has done this work long enough has seen it.</p>
+        <p>Skyline Drones was founded in Manila to solve a single problem — the human cost of working at height. In the Philippines, facade cleaning, fire response, and aerial inspection all still rely on workers suspended from ropes, balanced on scaffolding, or hanging from helicopter skids. Each of those is a death waiting to happen, and every operator who has done this work long enough has seen it.</p>
         <p>We replaced the worker, not the work. Three commercial drone divisions, one CAAP-certified pilot crew, one operations and insurance umbrella. The result is faster turnaround, lower liability, and zero workers leaving the ground.</p>
         <p>We operate across Metro Manila first, and nationwide on request. Every flight is logged, every airspace clearance is filed, and every job is documented end-to-end.</p>
       </div>
       <div class="who-callout fade-in fade-in-delay-1">
-        <h3>One Principle</h3>
-        <p>Every job at height should be done by a machine, not a human. We engineer each division around that single commitment — and the safety, insurance, and documentation that make it real.</p>
+        <h3>One Discipline</h3>
+        <p>One discipline runs across every division: the same certified pilots, the same tested aircraft, the same insurance umbrella, the same documentation standard — whether we're cleaning a 50-story tower, fighting an industrial fire, or capturing aerial imagery.</p>
       </div>
     </div>
   </div>
@@ -1839,24 +1843,24 @@ h1, h2, h3, h4, h5, h6 {
           <a href="/cleaning.html" class="btn-outline-gold">Explore Cleaning &rarr;</a>
         </div>
       </div>
-      <div class="vertical-card accent-gold fade-in fade-in-delay-1">
+      <div class="vertical-card accent-ember fade-in fade-in-delay-1">
         <div class="vertical-media">
           <img src="firefighting-hero.jpg" alt="Industrial firefighting drone above a Manila high-rise at night" onerror="this.style.opacity=0">
         </div>
         <div class="vertical-body">
           <h3>Aerial Firefighting</h3>
-          <p>Industrial firefighting RPAS for high-rise, refinery, warehouse, and wildland response. 500 L payload, 500 m reach, 4-minute deployment. Built to fly alongside the BFP and LGU command protocols.</p>
-          <a href="/firefighting.html" class="btn-outline-gold">Explore Firefighting &rarr;</a>
+          <p>Industrial firefighting RPAS for high-rise, refinery, warehouse, and wildland response. 500 m reach, 4-minute deployment. Built to fly alongside the BFP and LGU command protocols.</p>
+          <a href="/firefighting.html" class="btn-outline-ember">Explore Firefighting &rarr;</a>
         </div>
       </div>
-      <div class="vertical-card accent-gold fade-in fade-in-delay-2">
+      <div class="vertical-card accent-azure fade-in fade-in-delay-2">
         <div class="vertical-media">
           <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour" onerror="this.style.opacity=0">
         </div>
         <div class="vertical-body">
           <h3>Aerial Imaging & Inspection</h3>
-          <p>Real estate aerials, construction progress, brand films, roof & facade inspection, events, and cinematic reels. Same airframe family, same CAAP-certified crew, broadcast-grade output.</p>
-          <a href="/imaging.html" class="btn-outline-gold">Explore Imaging &rarr;</a>
+          <p>Real estate aerials, construction progress, brand films, roof & facade inspection, events, and cinematic reels. The same CAAP-certified crew, broadcast-grade output.</p>
+          <a href="/imaging.html" class="btn-outline-azure">Explore Imaging &rarr;</a>
         </div>
       </div>
     </div>
@@ -1909,7 +1913,7 @@ h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-2">
-        <img src="serve-government.jpg" alt="Government and civic buildings" onerror="this.style.opacity=0">
+        <img src="serve-government-ph.jpg" alt="Philippine government and civic buildings" onerror="this.style.opacity=0">
         <div class="scenario-meta">
           <div class="scenario-meta-tag">03</div>
           <h4>Government &amp; Civic</h4>
@@ -1948,6 +1952,41 @@ h1, h2, h3, h4, h5, h6 {
         <div class="scenario-meta">
           <div class="scenario-meta-tag">08</div>
           <h4>Office Campuses</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in">
+        <img src="serve-solar.jpg" alt="Solar farms across the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">09</div>
+          <h4>Solar Farms</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-1">
+        <img src="serve-wind.jpg" alt="Wind farms in the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">10</div>
+          <h4>Wind Farms</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-2">
+        <img src="serve-telecom.jpg" alt="Telecom towers across the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">11</div>
+          <h4>Telecom Towers</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-3">
+        <img src="serve-datacenter.jpg" alt="Data centers in the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">12</div>
+          <h4>Data Centers</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in">
+        <img src="serve-port.jpg" alt="Ports and maritime terminals in the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">13</div>
+          <h4>Ports &amp; Terminals</h4>
         </div>
       </div>
     </div>
@@ -2095,6 +2134,18 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
+
+// ========== HERO VIDEO FADE-IN ==========
+(function() {
+  const v = document.getElementById('heroVideo');
+  if (!v) return;
+  const reveal = () => v.classList.add('is-ready');
+  if (v.readyState >= 2) reveal();
+  else {
+    v.addEventListener('loadeddata', reveal, { once: true });
+    v.addEventListener('canplay', reveal, { once: true });
+  }
+})();
 
 // ========== SCROLL ANIMATIONS ==========
 const fadeElements = document.querySelectorAll('.fade-in');

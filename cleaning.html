@@ -311,6 +311,17 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .hero-video {
   position: absolute;
   top: 0;
@@ -473,8 +484,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========== 4. WHO WE ARE ========== */
 .who-we-are {
-  padding: clamp(64px, 10vw, 120px) 0;
+  padding: clamp(64px, 10vw, 120px) 0 clamp(40px, 6vw, 64px);
   background: var(--bg-dark);
+}
+.who-we-serve {
+  padding-top: clamp(40px, 6vw, 64px) !important;
 }
 
 .who-grid {
@@ -1491,30 +1505,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) { .scenarios-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .scenarios-grid { grid-template-columns: 1fr; } }
 
-/* ---- FOOTER MOVING ACCENT STRIP (gold) ---- */
-.footer-strip {
-  background: var(--gold);
-  color: var(--bg-dark);
-  padding: 1rem 0;
-  overflow: hidden;
-  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
-  letter-spacing: 0.1em;
-}
-.footer-strip-track {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  gap: 2rem;
-  animation: footer-strip-scroll 40s linear infinite;
-}
-.footer-strip-track span { font-size: 0.875rem; text-transform: uppercase; }
-@keyframes footer-strip-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .footer-strip-track { animation: none; }
-}
+/* footer moving strip removed */
 </style>
 
 <!-- FAQPage schema for rich snippets -->
@@ -1660,16 +1651,17 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="hero-bg.mp4" type="video/mp4">
-  </video>
+  <div class="hero-bg">
+    <img src="cleaning-hero-v33.jpg" alt="Skyline drone cleaning a Manila high-rise glass facade at golden hour">
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-breadcrumb fade-in">Manila, Philippines &middot; 2026</p>
+    <p class="hero-breadcrumb fade-in">Facade Cleaning Division</p>
     <h1 class="fade-in fade-in-delay-1">DRONE-POWERED COMMERCIAL BUILDING &amp; FACADE CLEANING.</h1>
     <p class="hero-subheadline fade-in fade-in-delay-2">WITHOUT A SINGLE WORKER AT HEIGHT.</p>
     <p class="hero-subtitle fade-in fade-in-delay-3">Autonomous drone cleaning for every surface — glass, cladding, concrete, stone, and metal — at any height up to 160 metres.</p>
     <div class="hero-buttons fade-in fade-in-delay-4">
+      <a href="#contact" class="btn-gold">Contact Us</a>
       <a href="#about" class="btn-outline">Learn More</a>
     </div>
   </div>
@@ -1739,9 +1731,6 @@ h1, h2, h3, h4, h5, h6 {
           </div>
         </div>
       </div>
-      <div class="who-callout fade-in">
-        <p>"The entirety of your building — not just the glazing — maintained to the same standard, without a single worker leaving the ground."</p>
-      </div>
     </div>
   </div>
 </section>
@@ -1769,7 +1758,7 @@ h1, h2, h3, h4, h5, h6 {
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-2">
-        <img src="serve-government.jpg" alt="Government building facade cleaning Manila — Skyline Drones for civic and institutional towers" onerror="this.style.opacity=0">
+        <img src="serve-government-ph.jpg" alt="Philippine government and civic building facade cleaning — Skyline Drones" onerror="this.style.opacity=0">
         <div class="scenario-meta">
           <div class="scenario-meta-tag">03</div>
           <h4>Government &amp; Civic Buildings</h4>
@@ -1808,6 +1797,41 @@ h1, h2, h3, h4, h5, h6 {
         <div class="scenario-meta">
           <div class="scenario-meta-tag">08</div>
           <h4>Public Infrastructure &amp; Stadiums</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in">
+        <img src="serve-solar.jpg" alt="Solar farm facade and panel cleaning across the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">09</div>
+          <h4>Solar Farms</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-1">
+        <img src="serve-wind.jpg" alt="Wind farm turbine cleaning Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">10</div>
+          <h4>Wind Farms</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-2">
+        <img src="serve-telecom.jpg" alt="Telecom tower cleaning across the Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">11</div>
+          <h4>Telecom Towers</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in fade-in-delay-3">
+        <img src="serve-datacenter.jpg" alt="Data center facade cleaning Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">12</div>
+          <h4>Data Centers</h4>
+        </div>
+      </div>
+      <div class="scenario-tile fade-in">
+        <img src="serve-port.jpg" alt="Ports and maritime terminal facade cleaning Philippines" onerror="this.style.opacity=0">
+        <div class="scenario-meta">
+          <div class="scenario-meta-tag">13</div>
+          <h4>Ports &amp; Terminals</h4>
         </div>
       </div>
     </div>
@@ -2063,17 +2087,7 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </section>
 
-<!-- ==================== MOVING ACCENT STRIP ==================== -->
-<div class="footer-strip" aria-hidden="true">
-  <div class="footer-strip-track">
-    <span>Elevate Cleaning to New Heights</span><span>&middot;</span>
-    <span>Without a Single Worker at Height</span><span>&middot;</span>
-    <span>Manila &middot; Philippines</span><span>&middot;</span>
-    <span>Elevate Cleaning to New Heights</span><span>&middot;</span>
-    <span>Without a Single Worker at Height</span><span>&middot;</span>
-    <span>Manila &middot; Philippines</span><span>&middot;</span>
-  </div>
-</div>
+<!-- footer moving strip removed -->
 
 <!-- ==================== 12. FOOTER ==================== -->
 <footer class="footer">
