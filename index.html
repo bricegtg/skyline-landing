@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0; right: 0;
   background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(16px);
-  padding: 32px 24px;
+  padding: 16px 24px 28px;
   border-bottom: 1px solid var(--card-border);
   z-index: 999;
 }
@@ -283,28 +283,66 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu a {
   display: block;
-  padding: 14px 0;
-  font-size: 16px;
-  font-weight: 600;
+  width: 100%;
+  padding: 18px 0;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
   color: var(--white);
   border-bottom: 1px solid var(--card-border);
-  transition: color var(--transition-interactive);
+  border-left: 3px solid transparent;
+  padding-left: 14px;
+  transition: color var(--transition-interactive), border-color var(--transition-interactive), background var(--transition-interactive);
 }
 
-.mobile-menu a:hover { color: var(--ember-bright); }
+.mobile-menu a:hover { color: var(--gold); }
+
+/* Division text colors (non-active state) */
+.mobile-menu a.nav-cleaning { color: var(--gold); }
+.mobile-menu a.nav-cleaning:hover { color: #F5C969; }
 .mobile-menu a.nav-firefighting { color: #D9362B; }
 .mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
 .mobile-menu a.nav-imaging { color: var(--azure); }
 .mobile-menu a.nav-imaging:hover { color: var(--azure-light); }
-.mobile-menu a.nav-cleaning { color: var(--gold); }
-.mobile-menu a.nav-cleaning:hover { color: #F5C969; }
 
+/* Active page: left-bar accent only — same row geometry as the rest */
+.mobile-menu a.nav-active {
+  border-left-color: var(--gold);
+  background: rgba(232, 184, 75, 0.08);
+  color: var(--gold);
+}
+.mobile-menu a.nav-active.nav-firefighting,
+.mobile-menu a.nav-active.nav-active-ember {
+  border-left-color: var(--ember);
+  background: rgba(217, 54, 43, 0.10);
+  color: var(--ember-bright, #FF6B5A);
+}
+.mobile-menu a.nav-active.nav-imaging,
+.mobile-menu a.nav-active.nav-active-azure {
+  border-left-color: var(--azure);
+  background: rgba(61, 111, 184, 0.12);
+  color: var(--azure-light, #6D9BE0);
+}
+
+/* Full-width Contact Us CTA at bottom */
 .mobile-menu .nav-cta {
-  display: inline-block;
-  margin-top: 18px;
-  border-bottom: none;
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 18px 0;
+  text-align: center;
+  background: var(--gold);
+  color: var(--bg-dark) !important;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+.mobile-menu .nav-cta:hover {
+  background: var(--dark-gold, #C99A2F);
+  color: var(--bg-dark) !important;
 }
 
 /* ========== 2. HERO ========== */
@@ -1582,9 +1620,8 @@ h1, h2, h3, h4, h5, h6 {
 .ember-text,
 .section-heading .ember { color: var(--gold) !important; }
 
-/* ---- ACTIVE NAV PILL (Contact-Us style filled pill) ---- */
-.nav-active,
-.mobile-menu a.nav-active {
+/* ---- ACTIVE NAV PILL (Desktop nav links only — mobile uses left-bar accent above) ---- */
+.nav-links a.nav-active {
   background: var(--gold);
   color: var(--bg-dark) !important;
   padding: 0.5rem 1.25rem;
@@ -1592,13 +1629,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.05em;
 }
-.nav-active:hover,
-.mobile-menu a.nav-active:hover { background: var(--dark-gold); color: var(--bg-dark) !important; }
-.mobile-menu a.nav-active { display: inline-block; border-bottom: none; }
-.nav-active-ember { background: var(--ember); }
-.nav-active-ember:hover { background: var(--ember-bright); }
-.nav-active-azure { background: var(--azure); }
-.nav-active-azure:hover { background: var(--azure-light); }
+.nav-links a.nav-active:hover { background: var(--dark-gold); color: var(--bg-dark) !important; }
+.nav-links a.nav-active.nav-active-ember { background: var(--ember); color: var(--white) !important; }
+.nav-links a.nav-active.nav-active-ember:hover { background: var(--ember-bright); }
+.nav-links a.nav-active.nav-active-azure { background: var(--azure); color: var(--white) !important; }
+.nav-links a.nav-active.nav-active-azure:hover { background: var(--azure-light); }
 
 /* ---- WHO WE SERVE: photo-tile grid (mirrors firefighting .scenarios-grid) ---- */
 .scenarios-grid {
