@@ -1,0 +1,9 @@
+Contact: mailto:skylinedrones.ph@gmail.com
+Contact: https://wa.me/639171480498
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://skylinedronesph.com/.well-known/security.txt
+
+# Skyline Drones PH — Security Disclosure
+# Please report vulnerabilities responsibly via the contacts above.
+# Allow up to 5 business days for an initial reply.
