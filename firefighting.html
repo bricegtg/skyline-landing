@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Tag Manager: paste the container snippet here once the GTM container exists (see SEO fix pack). Keep the dataLayer push in handleSubmit(). -->
 <title>Aerial Firefighting Drones Philippines | Skyline Drones</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<meta name="description" content="Aerial firefighting drones in the Philippines. Skyline RPAS division for high-rise, informal settlement, refinery, warehouse, and urban fire response across Manila and the Philippines. Drone firefighting up to 160 metres. Zero firefighter exposure at scene. CAAP-certified.">
+<meta name="description" content="Aerial firefighting drones for high-rise, refinery and warehouse fires across the Philippines. 160 m reach, BFP-coordinated, CAAP-certified, fully insured.">
 <meta name="keywords" content="aerial firefighting Philippines, firefighting drone Philippines, drone firefighting high rise, RPAS firefighting, urban firefighting drone, aerial fire response Philippines, high-rise fire drone Manila, industrial firefighting drone">
 <meta property="og:title" content="Skyline Firefighting Drones — Reach. Respond. Protect.">
 <meta property="og:description" content="An RPAS division built to reach the floors ladders can't, respond in conditions trucks can't, and protect lives no insurance policy can replace.">
@@ -1432,8 +1433,8 @@ h1, h2, h3, h4, h5, h6 {
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-breadcrumb fade-in">Firefighting RPAS Division</p>
-    <h1 class="fade-in fade-in-delay-1">REACH. <span class="ember">RESPOND.</span> PROTECT.</h1>
-    <p class="hero-subheadline fade-in fade-in-delay-2">REMOTELY PILOTED AERIAL FIRE RESPONSE FOR THE PHILIPPINES.</p>
+    <h1 class="fade-in fade-in-delay-1">Aerial firefighting drones for high-rise &amp; industrial fires <span class="ember">in the Philippines.</span></h1>
+    <p class="hero-subheadline fade-in fade-in-delay-2">Reach. Respond. Protect.</p>
     <p class="hero-subtitle fade-in fade-in-delay-3">
       An RPAS division built to reach the floors ladders can't, respond in conditions trucks can't, and protect lives no insurance policy can replace — engineered to deploy alongside the Bureau of Fire Protection, MMDA, LGUs, and private industrial operators.
     </p>
@@ -1940,7 +1941,7 @@ h1, h2, h3, h4, h5, h6 {
         <a href="mailto:skylinedrones.ph@gmail.com">skylinedrones.ph@gmail.com</a>
         <a href="tel:+639171480498">+63 917 148 0498</a>
         <div class="footer-social">
-          <a href="https://www.facebook.com/share/1AfzqbDvnD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/profile.php?id=61579503323453" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
           <a href="https://www.instagram.com/skylinedrones.ph/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -2016,6 +2017,7 @@ function handleSubmit(e) {
   })
   .then(response => response.json())
   .then(data => {
+    window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "generate_lead", form: "contact" });
     const toast = document.getElementById('toast');
     toast.classList.add('show');
     form.reset();
