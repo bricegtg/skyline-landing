@@ -29,6 +29,117 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="PH-00">
 <meta name="geo.placename" content="Manila">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://skylinedronesph.com/firefighting.html#service",
+      "name": "Aerial Firefighting Drones",
+      "serviceType": "Aerial firefighting and fire reconnaissance",
+      "url": "https://skylinedronesph.com/firefighting.html",
+      "image": "https://skylinedronesph.com/firefighting-hero.jpg",
+      "provider": {
+        "@id": "https://skylinedronesph.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Manila"
+        },
+        {
+          "@type": "City",
+          "name": "Makati"
+        },
+        {
+          "@type": "City",
+          "name": "Taguig"
+        },
+        {
+          "@type": "City",
+          "name": "Pasig"
+        },
+        {
+          "@type": "City",
+          "name": "Quezon City"
+        },
+        {
+          "@type": "City",
+          "name": "Cebu"
+        },
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        }
+      ],
+      "description": "Remotely piloted aerial firefighting for high-rise, informal settlement and industrial fires across the Philippines. Up to 160 m reach, BFP-coordinated, CAAP-certified pilots, fully insured."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can drones actually put out a high-rise fire in Manila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skyline's firefighting drones are a suppression and reconnaissance platform that works alongside the Bureau of Fire Protection, not a replacement for it. The aircraft reaches floors up to 160 meters, well above the roughly 30-meter limit of conventional ladders, carries thermal and optical cameras for the incident commander, and delivers water or foam through a hose line fed from a BFP truck or hydrant. On upper floors that a ladder cannot reach, that changes the first ten minutes of the response."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can a firefighting drone be airborne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From arrival on scene, a Skyline crew has an aircraft in the air in about four minutes: perimeter set, hose connected to the truck or hydrant, and the first reconnaissance pass complete before ground crews have finished laying line. Standby contracts keep a crew and aircraft pre-positioned for high-risk assets such as refineries, warehouses and dense residential districts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who controls the drone during a fire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A CAAP-certified remote pilot in command flies every sortie, with a co-pilot or visual observer on high-complexity missions. The pilot takes tasking from the BFP or LGU incident commander over the same radio net as the ground crews, so the aircraft is part of the command structure rather than a separate operation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kinds of fires are the drones built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High-rise towers, informal settlements with alleys too narrow for trucks, refinery and industrial sites with restricted ground approach, warehouses, bridges, tanker incidents, brush fires and mass-gathering venues. Each scenario maps to a documented response playbook aligned with BFP and LGU protocols."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an LGU or a private estate buy or lease the system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Skyline offers equipment sale and lease, pilot training and consulting, and maintenance and repair for LGUs, MDRRMC units and private industrial brigades that want their own capability, as well as standby and on-call response contracts flown by Skyline crews."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Skyline Drones",
+          "item": "https://skylinedronesph.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aerial Firefighting Drones",
+          "item": "https://skylinedronesph.com/firefighting.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 /* ========== RESET & BASE ========== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1390,6 +1501,58 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a.nav-active.nav-active-azure { background: var(--azure); color: var(--white) !important; }
 .nav-links a.nav-active.nav-active-azure:hover { background: var(--azure-light); }
 
+/* ========== FAQ ACCORDION ========== */
+.faq-section {
+  padding: clamp(64px, 10vw, 120px) 0;
+  background: var(--black);
+}
+.faq-list {
+  margin-top: 48px;
+  max-width: 980px;
+}
+.faq-item {
+  border-top: 1px solid var(--card-border);
+  padding: 26px 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--card-border); }
+.faq-item h3 {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.faq-item p {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+}
+.faq-item p + p { margin-top: 12px; }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ember);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary h3 { margin-bottom: 0; }
+.faq-item[open] summary h3 { margin-bottom: 14px; }
+.faq-item summary:focus-visible { outline: 2px solid var(--ember); outline-offset: 4px; }
+
 </style>
 </head>
 <body>
@@ -1428,7 +1591,7 @@ h1, h2, h3, h4, h5, h6 {
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="firefighting-hero.jpg" alt="Industrial firefighting drone hovering above a Metro Manila high-rise fire at night">
+    <img fetchpriority="high" src="firefighting-hero.jpg" alt="Industrial firefighting drone hovering above a Metro Manila high-rise fire at night">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1498,7 +1661,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="pillar-card fade-in">
         <div class="pillar-tag">Reach</div>
         <h3>Where Ladders Stop</h3>
-        <p>Fire trucks and articulated platforms cap out at roughly 10 storeys. Our aerial system operates up to 160 metres — extending suppression and reconnaissance to the floors where modern Philippine high-rises actually burn.</p>
+        <p>Fire trucks and articulated platforms cap out at roughly 10 storeys. Our aerial system operates up to 160 meters — extending suppression and reconnaissance to the floors where modern Philippine high-rises actually burn.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-1">
         <div class="pillar-tag">Respond</div>
@@ -1594,7 +1757,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="challenge-card fade-in">
         <div class="mono-number">Constraint 01</div>
         <h3>The Vertical Limit</h3>
-        <p>Conventional fire ladders in the Philippines top out at roughly 30 metres — about 10 storeys. Manila now has hundreds of residential and commercial towers above that line. When a fire breaks out on the 25th floor of a BGC tower, the ladder is a spectator.</p>
+        <p>Conventional fire ladders in the Philippines top out at roughly 30 meters — about 10 storeys. Manila now has hundreds of residential and commercial towers above that line. When a fire breaks out on the 25th floor of a BGC tower, the ladder is a spectator.</p>
       </div>
       <div class="challenge-card fade-in fade-in-delay-1">
         <div class="mono-number">Constraint 02</div>
@@ -1669,7 +1832,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="step fade-in">
         <div class="step-number">1</div>
         <h3>Dispatch</h3>
-        <p>Activation request received from BFP, LGU, or contracted private operator. Crew, ground station, and airframes mobilised within minutes.</p>
+        <p>Activation request received from BFP, LGU, or contracted private operator. Crew, ground station, and airframes mobilized within minutes.</p>
       </div>
       <div class="step fade-in fade-in-delay-1">
         <div class="step-number">2</div>
@@ -1701,7 +1864,7 @@ h1, h2, h3, h4, h5, h6 {
     <div class="fade-in">
       <p class="section-label">How We Work With You</p>
       <h2 class="section-heading">A COMPLETE <span class="ember">FIRE-RESPONSE PARTNERSHIP</span></h2>
-      <p class="section-subtitle">From equipment to training to ongoing support — every engagement includes the capabilities you need to stand up and sustain an aerial fire-response programme.</p>
+      <p class="section-subtitle">From equipment to training to ongoing support — every engagement includes the capabilities you need to stand up and sustain an aerial fire-response program.</p>
     </div>
     <div class="engagement-grid">
       <div class="engagement-card fade-in">
@@ -1716,7 +1879,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="engagement-card fade-in fade-in-delay-1">
         <h3>Training &amp; Consulting</h3>
-        <p>End-to-end programme to stand up an aerial fire-response capability inside your organisation — from CAAP RPIC certification of your operators to integration with existing dispatch and command protocols.</p>
+        <p>End-to-end program to stand up an aerial fire-response capability inside your organization — from CAAP RPIC certification of your operators to integration with existing dispatch and command protocols.</p>
         <ul>
           <li>RPIC certification pathway</li>
           <li>Scenario-based crew training</li>
@@ -1756,8 +1919,8 @@ h1, h2, h3, h4, h5, h6 {
       <tbody>
         <tr>
           <td>Vertical Reach</td>
-          <td>Up to 160 metres / 55 storeys</td>
-          <td>~30 metres / 10 storeys</td>
+          <td>Up to 160 meters / 55 storeys</td>
+          <td>~30 meters / 10 storeys</td>
         </tr>
         <tr>
           <td>Access</td>
@@ -1831,6 +1994,38 @@ h1, h2, h3, h4, h5, h6 {
 </section>
 
 <!-- ==================== 13. CAPABILITY BRIEFING ==================== -->
+<!-- ========== FAQ (visible content for the FAQPage schema in <head>) ========== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">Questions From Fire Services</p>
+      <h2 class="section-heading">AERIAL FIREFIGHTING IN THE PHILIPPINES, <span class="ember">ANSWERED.</span></h2>
+    </div>
+    <div class="faq-list fade-in">
+      <details class="faq-item">
+        <summary><h3>Can drones actually put out a high-rise fire in Manila?</h3></summary>
+        <p>Skyline&#x27;s firefighting drones are a suppression and reconnaissance platform that works alongside the Bureau of Fire Protection, not a replacement for it. The aircraft reaches floors up to 160 meters, well above the roughly 30-meter limit of conventional ladders, carries thermal and optical cameras for the incident commander, and delivers water or foam through a hose line fed from a BFP truck or hydrant. On upper floors that a ladder cannot reach, that changes the first ten minutes of the response.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>How fast can a firefighting drone be airborne?</h3></summary>
+        <p>From arrival on scene, a Skyline crew has an aircraft in the air in about four minutes: perimeter set, hose connected to the truck or hydrant, and the first reconnaissance pass complete before ground crews have finished laying line. Standby contracts keep a crew and aircraft pre-positioned for high-risk assets such as refineries, warehouses and dense residential districts.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Who controls the drone during a fire?</h3></summary>
+        <p>A CAAP-certified remote pilot in command flies every sortie, with a co-pilot or visual observer on high-complexity missions. The pilot takes tasking from the BFP or LGU incident commander over the same radio net as the ground crews, so the aircraft is part of the command structure rather than a separate operation.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>What kinds of fires are the drones built for?</h3></summary>
+        <p>High-rise towers, informal settlements with alleys too narrow for trucks, refinery and industrial sites with restricted ground approach, warehouses, bridges, tanker incidents, brush fires and mass-gathering venues. Each scenario maps to a documented response playbook aligned with BFP and LGU protocols.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Can an LGU or a private estate buy or lease the system?</h3></summary>
+        <p>Yes. Skyline offers equipment sale and lease, pilot training and consulting, and maintenance and repair for LGUs, MDRRMC units and private industrial brigades that want their own capability, as well as standby and on-call response contracts flown by Skyline crews.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-header fade-in">
@@ -1876,9 +2071,9 @@ h1, h2, h3, h4, h5, h6 {
           <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
         </div>
         <div class="form-group">
-          <label for="agency_type">Agency / Organisation Type</label>
+          <label for="agency_type">Agency / Organization Type</label>
           <select id="agency_type" name="agency_type" required>
-            <option value="">Select organisation type</option>
+            <option value="">Select organization type</option>
             <option value="BFP">Bureau of Fire Protection (BFP)</option>
             <option value="MMDA">MMDA</option>
             <option value="LGU">Local Government Unit (LGU)</option>
@@ -1891,8 +2086,8 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="form-row">
         <div class="form-group full-width">
-          <label for="organisation">Organisation / Jurisdiction</label>
-          <input type="text" id="organisation" name="organisation" placeholder="e.g. BFP NCR, Quezon City LGU, Petron Bataan Refinery">
+          <label for="organization">Organization / Jurisdiction</label>
+          <input type="text" id="organization" name="organization" placeholder="e.g. BFP NCR, Quezon City LGU, Petron Bataan Refinery">
         </div>
       </div>
       <div class="form-row">
@@ -1957,6 +2152,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Skyline Drones &middot; Firefighting RPAS Division &middot; Manila, Philippines</p>
+      <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Use</a></p>
     </div>
   </div>
 </footer>

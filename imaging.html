@@ -29,6 +29,117 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="PH-00">
 <meta name="geo.placename" content="Manila">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://skylinedronesph.com/imaging.html#service",
+      "name": "Drone Inspection & Aerial Photography",
+      "serviceType": "Drone inspection, aerial survey and aerial photography",
+      "url": "https://skylinedronesph.com/imaging.html",
+      "image": "https://skylinedronesph.com/imaging-cinematic.jpg",
+      "provider": {
+        "@id": "https://skylinedronesph.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Manila"
+        },
+        {
+          "@type": "City",
+          "name": "Makati"
+        },
+        {
+          "@type": "City",
+          "name": "Taguig"
+        },
+        {
+          "@type": "City",
+          "name": "Pasig"
+        },
+        {
+          "@type": "City",
+          "name": "Quezon City"
+        },
+        {
+          "@type": "City",
+          "name": "Cebu"
+        },
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        }
+      ],
+      "description": "Drone inspection, construction progress monitoring and aerial photography in Manila and nationwide. Roof and facade surveys, real estate and brand films, CAAP-certified pilots."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What drone inspection services does Skyline offer in the Philippines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof and facade inspection with defect-mapped orthomosaics, construction progress documentation on a schedule, structural and industrial inspection with optional thermal imaging, and photographic surveys for insurers and asset owners. The same flight can also produce marketing stills and video, so one mobilization covers engineering and marketing needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much detail can a drone inspection capture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sub-centimeter resolution on roofs, facades and structural members from a broadcast-grade 4K and 8K sensor, stabilized in wind. Thermal capture is available for moisture, insulation and electrical surveys. Outputs are delivered as annotated images, orthomosaics and a written report built for engineers and insurers, not only for brochures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you need permits to fly a camera drone in Manila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every commercial flight in the Philippines requires a CAAP-certified remote pilot, and flights near airports or in controlled airspace need clearance. Skyline files the airspace clearance and risk assessment for every shoot and briefs the property owner before take-off, so the client does not carry the paperwork."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an aerial photography shoot take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most single-property shoots are completed in a half day on site, with same-day proxies and a final color-graded delivery on the agreed window. Construction progress records are flown on a repeating schedule so each visit takes an hour or two and delivers a consistent, comparable dataset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you shoot outside Metro Manila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The division is Manila-based and flies nationwide on request, from BGC developments to refinery surveys in Bataan and resort properties in Cebu. Provincial mobilization is quoted up front as part of the fixed fee."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Skyline Drones",
+          "item": "https://skylinedronesph.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Drone Inspection & Aerial Photography",
+          "item": "https://skylinedronesph.com/imaging.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 /* ========== RESET & BASE ========== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1383,6 +1494,58 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* footer moving strip removed */
+/* ========== FAQ ACCORDION ========== */
+.faq-section {
+  padding: clamp(64px, 10vw, 120px) 0;
+  background: var(--black);
+}
+.faq-list {
+  margin-top: 48px;
+  max-width: 980px;
+}
+.faq-item {
+  border-top: 1px solid var(--card-border);
+  padding: 26px 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--card-border); }
+.faq-item h3 {
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.faq-item p {
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+}
+.faq-item p + p { margin-top: 12px; }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--azure);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary h3 { margin-bottom: 0; }
+.faq-item[open] summary h3 { margin-bottom: 14px; }
+.faq-item summary:focus-visible { outline: 2px solid var(--azure); outline-offset: 4px; }
+
 </style>
 </head>
 <body>
@@ -1421,7 +1584,7 @@ h1, h2, h3, h4, h5, h6 {
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
+    <img fetchpriority="high" src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1496,7 +1659,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="pillar-card fade-in fade-in-delay-1">
         <div class="pillar-tag">Inspect</div>
-        <h3>Sub-Centimetre Detail</h3>
+        <h3>Sub-Centimeter Detail</h3>
         <p>Defect-level resolution on roofs, facades, and structural members. Thermal optional. Defect-mapped orthomosaics built for engineers, insurers, and asset owners — not just for the brochure.</p>
       </div>
       <div class="pillar-card fade-in fade-in-delay-2">
@@ -1607,7 +1770,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="tech-card fade-in fade-in-delay-1">
         <div class="tech-spec">4K / 60fps</div>
         <div class="tech-label">Sensors</div>
-        <h3>Stabilised Capture</h3>
+        <h3>Stabilized Capture</h3>
         <p>4K / 60fps capture or 8K stills on a stabilized gimbal, graded to your brand palette. Full-frame dynamic range, smooth motion, sharp in wind.</p>
       </div>
       <div class="tech-card fade-in fade-in-delay-2">
@@ -1802,6 +1965,38 @@ h1, h2, h3, h4, h5, h6 {
 
 
 <!-- ==================== 13. CAPABILITY BRIEFING ==================== -->
+<!-- ========== FAQ (visible content for the FAQPage schema in <head>) ========== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">Questions Before a Shoot</p>
+      <h2 class="section-heading">DRONE INSPECTION AND AERIAL PHOTOGRAPHY, <span class="azure">ANSWERED.</span></h2>
+    </div>
+    <div class="faq-list fade-in">
+      <details class="faq-item">
+        <summary><h3>What drone inspection services does Skyline offer in the Philippines?</h3></summary>
+        <p>Roof and facade inspection with defect-mapped orthomosaics, construction progress documentation on a schedule, structural and industrial inspection with optional thermal imaging, and photographic surveys for insurers and asset owners. The same flight can also produce marketing stills and video, so one mobilization covers engineering and marketing needs.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>How much detail can a drone inspection capture?</h3></summary>
+        <p>Sub-centimeter resolution on roofs, facades and structural members from a broadcast-grade 4K and 8K sensor, stabilized in wind. Thermal capture is available for moisture, insulation and electrical surveys. Outputs are delivered as annotated images, orthomosaics and a written report built for engineers and insurers, not only for brochures.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Do you need permits to fly a camera drone in Manila?</h3></summary>
+        <p>Yes. Every commercial flight in the Philippines requires a CAAP-certified remote pilot, and flights near airports or in controlled airspace need clearance. Skyline files the airspace clearance and risk assessment for every shoot and briefs the property owner before take-off, so the client does not carry the paperwork.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>How long does an aerial photography shoot take?</h3></summary>
+        <p>Most single-property shoots are completed in a half day on site, with same-day proxies and a final color-graded delivery on the agreed window. Construction progress records are flown on a repeating schedule so each visit takes an hour or two and delivers a consistent, comparable dataset.</p>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Can you shoot outside Metro Manila?</h3></summary>
+        <p>Yes. The division is Manila-based and flies nationwide on request, from BGC developments to refinery surveys in Bataan and resort properties in Cebu. Provincial mobilization is quoted up front as part of the fixed fee.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-header fade-in">
@@ -1930,6 +2125,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Skyline Drones &middot; Aerial Imaging & Inspection Division &middot; Manila, Philippines</p>
+      <p><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Use</a></p>
     </div>
   </div>
 </footer>

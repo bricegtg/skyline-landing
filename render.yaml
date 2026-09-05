@@ -65,6 +65,23 @@ services:
         name: Content-Security-Policy
         value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 
+      # Static media: cache 30 days at browser and edge (HTML keeps Render's default short TTL)
+      - path: /*.jpg
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.png
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.webp
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.mp4
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.ico
+        name: Cache-Control
+        value: public, max-age=2592000
+
       # security.txt — make it discoverable and uncached
       - path: /.well-known/security.txt
         name: Content-Type
