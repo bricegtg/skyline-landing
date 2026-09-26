@@ -1662,7 +1662,7 @@ h1, h2, h3, h4, h5, h6 {
     <h2>How long we keep it</h2>
     <p>Inquiry records are kept for as long as needed to respond and, where a job follows, for the duration of the engagement and the retention period required by Philippine tax and corporate law. You may ask us to delete an inquiry at any time.</p>
     <h2>Your rights</h2>
-    <p>Under the Data Privacy Act you may ask what personal information we hold about you, request a correction, object to processing, ask for deletion, or file a complaint with the National Privacy Commission. Write to <a href="mailto:skylinedrones.ph@gmail.com">skylinedrones.ph@gmail.com</a> and we will respond within the period required by law.</p>
+    <p>Under the Data Privacy Act you may ask what personal information we hold about you, request a correction, object to processing, ask for deletion, or file a complaint with the National Privacy Commission. Write to <a href="mailto:contact@skylinedronesph.com">contact@skylinedronesph.com</a> and we will respond within the period required by law.</p>
     <h2>Cookies</h2>
     <p>This site does not set cookies of its own. Analytics tools, when enabled, may set cookies to distinguish visits. You can block them in your browser without affecting the site.</p>
     <h2>Drone imagery</h2>
@@ -1697,7 +1697,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <a href="mailto:skylinedrones.ph@gmail.com">skylinedrones.ph@gmail.com</a>
+        <a href="mailto:contact@skylinedronesph.com">contact@skylinedronesph.com</a>
         <a href="tel:+639523981373">+63 952 398 1373</a>
         <div class="footer-social">
           <a href="https://www.facebook.com/profile.php?id=61579503323453" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -1790,7 +1790,11 @@ function handleSubmit(e) {
 
   const formData = new FormData(form);
 
-  fetch('https://formsubmit.co/ajax/skylinedrones.ph@gmail.com', {
+  // Endpoint is built at runtime (not a literal string) so scrapers scanning
+  // the static JS can't harvest the address directly.
+  const formsubmitEndpoint = 'https://formsubmit.co/ajax/' + ['contact', 'skylinedronesph.com'].join('@');
+
+  fetch(formsubmitEndpoint, {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: formData

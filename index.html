@@ -1714,7 +1714,7 @@ h1, h2, h3, h4, h5, h6 {
       "logo": "https://skylinedronesph.com/favicon-512x512.png",
       "image": "https://skylinedronesph.com/cleaning-hero.jpg",
       "description": "Manila-based commercial drone operator running three divisions — facade cleaning, aerial firefighting, and aerial imaging & inspection — all flown by one CAAP-certified crew.",
-      "email": "skylinedrones.ph@gmail.com",
+      "email": "contact@skylinedronesph.com",
       "telephone": "+63-952-398-1373",
       "sameAs": [
         "https://www.linkedin.com/company/skyline-drones-ph",
@@ -1730,7 +1730,7 @@ h1, h2, h3, h4, h5, h6 {
       "image": "https://skylinedronesph.com/cleaning-hero.jpg",
       "url": "https://skylinedronesph.com/",
       "telephone": "+63-952-398-1373",
-      "email": "skylinedrones.ph@gmail.com",
+      "email": "contact@skylinedronesph.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -2098,9 +2098,9 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 
     <div class="contact-methods fade-in">
-      <a href="mailto:skylinedrones.ph@gmail.com" class="contact-method">
+      <a href="mailto:contact@skylinedronesph.com" class="contact-method">
         <div class="contact-method-label">Email</div>
-        <div class="contact-method-value">skylinedrones.ph@gmail.com</div>
+        <div class="contact-method-value">contact@skylinedronesph.com</div>
       </a>
       <a href="tel:+639523981373" class="contact-method">
         <div class="contact-method-label">Phone</div>
@@ -2114,7 +2114,6 @@ h1, h2, h3, h4, h5, h6 {
 
     <form class="contact-form fade-in" id="contactForm" onsubmit="handleSubmit(event)">
       <input type="hidden" name="_subject" value="New Inquiry from Skyline Drones Website">
-      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" style="display:none">
       <div class="form-row">
@@ -2190,7 +2189,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <a href="mailto:skylinedrones.ph@gmail.com">skylinedrones.ph@gmail.com</a>
+        <a href="mailto:contact@skylinedronesph.com">contact@skylinedronesph.com</a>
         <a href="tel:+639523981373">+63 952 398 1373</a>
         <div class="footer-social">
           <a href="https://www.facebook.com/profile.php?id=61579503323453" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -2272,7 +2271,11 @@ function handleSubmit(e) {
 
   const formData = new FormData(form);
 
-  fetch('https://formsubmit.co/ajax/skylinedrones.ph@gmail.com', {
+  // Endpoint is built at runtime (not a literal string) so scrapers scanning
+  // the static JS can't harvest the address directly.
+  const formsubmitEndpoint = 'https://formsubmit.co/ajax/' + ['contact', 'skylinedronesph.com'].join('@');
+
+  fetch(formsubmitEndpoint, {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: formData

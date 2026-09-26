@@ -1,13 +1,21 @@
 # Render Blueprint — defines build + headers for skylinedronesph.com
 # Reference: https://render.com/docs/blueprint-spec
 #
-# After committing, link this Blueprint in the Render Dashboard:
-#   New > Blueprint > select bricegtg/skyline-landing > main branch
+# IMPORTANT: the live service is named "skyline-landing-site", not
+# "skyline-landing". This file's service name below has been aligned to
+# match so that linking this Blueprint (New > Blueprint > select
+# bricegtg/skyline-landing > main branch) updates the existing live
+# service instead of creating a duplicate one.
+#
+# If you don't want to link the Blueprint, you can instead paste the
+# headers below directly into the live service's dashboard under
+# skyline-landing-site > Settings > Redirects/Rewrites and Headers.
+# See the PR description for the exact steps and header list.
 # Existing dashboard rules NOT listed here are preserved.
 
 services:
   - type: web
-    name: skyline-landing
+    name: skyline-landing-site
     runtime: static
     branch: main
     buildCommand: ""           # static repo — nothing to build
@@ -19,6 +27,16 @@ services:
         destination: /
       - type: redirect
         source: /about
+        destination: /
+      # Blog disabled pending content review (June 20, 2026). The pages
+      # under /blog/ already client-side redirect to / via meta-refresh,
+      # so this is a defense-in-depth server-side redirect for any path
+      # under /blog/ that isn't a real file.
+      - type: redirect
+        source: /blog
+        destination: /
+      - type: redirect
+        source: /blog/*
         destination: /
 
     headers:
@@ -32,7 +50,7 @@ services:
         name: X-Frame-Options
         value: DENY
 
-      # Belt-and-braces MIME sniffing block (Render adds this too)
+      # Belt-and-braces MIME sniffing block (Render/Cloudflare add this too)
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
@@ -55,15 +73,19 @@ services:
         name: Cross-Origin-Resource-Policy
         value: same-site
 
-      # Content Security Policy
-      # - 'unsafe-inline' on script-src is required because index.html ships inline <script> blocks and onclick handlers
-      # - 'unsafe-inline' on style-src for inline style="" attributes
-      # - https: on img-src to allow social embeds / contact form images
-      # - formsubmit.co is the contact form endpoint (handleSubmit posts to formsubmit.co/ajax)
-      # - googletagmanager.com / google-analytics.com for GTM + GA4
+      # Content Security Policy, tuned to what the site actually loads
+      # (verified against every page's <script>/<link>/<img>/fetch() references):
+      # - No third-party scripts, stylesheets, fonts or analytics are loaded live,
+      #   so script-src/style-src/font-src only need 'self' (+ 'unsafe-inline'
+      #   below) and there is no googletagmanager.com/google-analytics.com to allow.
+      # - 'unsafe-inline' on script-src is required because the pages ship inline
+      #   <script> blocks and onclick/onsubmit/onerror handlers.
+      # - 'unsafe-inline' on style-src is required for inline style="" attributes.
+      # - img-src is 'self' + data:/blob: only; no external image hosts are used.
+      # - formsubmit.co is the contact form's fetch() endpoint and form fallback.
       - path: /*
         name: Content-Security-Policy
-        value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 
       # Static media: cache 30 days at browser and edge (HTML keeps Render's default short TTL)
       - path: /*.jpg
