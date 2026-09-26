@@ -2374,27 +2374,37 @@ function handleSubmit(e) {
   // the static JS can't harvest the address directly.
   const formsubmitEndpoint = 'https://formsubmit.co/ajax/' + ['contact', 'skylinedronesph.com'].join('@');
 
+  const toast = document.getElementById('toast');
+  const defaultToastText = toast.textContent;
+
   fetch(formsubmitEndpoint, {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: formData
   })
-  .then(response => response.json())
+  .then(response => {
+    // FormSubmit (like most APIs) can return a non-2xx response without
+    // fetch() itself rejecting, so success must be confirmed explicitly
+    // instead of assuming the request worked once it resolves.
+    if (!response.ok) {
+      throw new Error('FormSubmit responded with HTTP ' + response.status);
+    }
+    return response.json();
+  })
   .then(data => {
     window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "generate_lead", form: "contact" });
-    const toast = document.getElementById('toast');
+    toast.textContent = defaultToastText;
     toast.classList.add('show');
     form.reset();
     setTimeout(() => toast.classList.remove('show'), 4000);
   })
   .catch(error => {
-    const toast = document.getElementById('toast');
-    toast.textContent = 'Something went wrong. Please try WhatsApp or email us directly.';
+    toast.textContent = "Sorry, that didn't go through. Please email contact@skylinedronesph.com or call +63 952 398 1373.";
     toast.classList.add('show');
     setTimeout(() => {
-      toast.textContent = 'Message sent! We\'ll be in touch soon.';
       toast.classList.remove('show');
-    }, 4000);
+      setTimeout(() => { toast.textContent = defaultToastText; }, 500);
+    }, 7000);
   })
   .finally(() => {
     btn.textContent = originalText;
