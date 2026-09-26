@@ -1293,6 +1293,47 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-1px);
 }
 
+.consent-notice {
+  font-size: 12.5px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.consent-notice a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.consent-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.consent-check input[type="checkbox"] {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.consent-check a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+.consent-check:focus-within {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
 .whatsapp-btn {
   display: flex;
   align-items: center;
@@ -2256,6 +2297,13 @@ h1, h2, h3, h4, h5, h6 {
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us about your building and cleaning needs..."></textarea>
         </div>
+      </div>
+      <div class="form-group full-width form-consent">
+        <p class="consent-notice">We'll use the details above to reply to your inquiry and prepare a quotation. See our <a href="/privacy.html">Privacy Notice</a> for how long we keep them, who helps us process them (including providers outside the Philippines), and your rights.</p>
+        <label class="consent-check">
+          <input type="checkbox" name="privacy_ack" required>
+          <span>I have read the <a href="/privacy.html">Privacy Notice</a>.</span>
+        </label>
       </div>
       <button type="submit" class="form-submit">Contact Us</button>
     </form>
