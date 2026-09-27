@@ -1308,6 +1308,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
   cursor: pointer;
   margin-bottom: 8px;
+  padding: 11px 0;
 }
 
 .consent-check input[type="checkbox"] {
@@ -1513,6 +1514,10 @@ h1, h2, h3, h4, h5, h6 {
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .nav-brand-tagline { display: none; }
+  /* .tech-grid only collapsed 3 -> 2 columns at 960px; on narrow phones
+     (~375px) two fixed-padding .tech-card columns don't fit and force
+     horizontal scroll. */
+  .tech-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -2091,17 +2096,17 @@ h1, h2, h3, h4, h5, h6 {
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your full name">
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+63 XXX XXX XXXX">
         </div>
         <div class="form-group">
           <label for="project_type">Project Type</label>
@@ -2120,7 +2125,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="form-row">
         <div class="form-group full-width">
           <label for="organization">Company / Project</label>
-          <input type="text" id="organization" name="organization" placeholder="e.g. Ayala Land, BGC tower listing, Bataan refinery survey">
+          <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="e.g. Ayala Land, BGC tower listing, Bataan refinery survey">
         </div>
       </div>
       <div class="form-row">
