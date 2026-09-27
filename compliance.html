@@ -2059,9 +2059,9 @@ function handleSubmit(e) {
 
   const formData = new FormData(form);
 
-  // Endpoint is built at runtime (not a literal string) so scrapers scanning
-  // the static JS can't harvest the address directly.
-  const formsubmitEndpoint = 'https://formsubmit.co/ajax/' + ['contact', 'skylinedronesph.com'].join('@');
+  // FormSubmit's hashed-alias endpoint for contact@skylinedronesph.com,
+  // so the address itself never appears in the page source.
+  const formsubmitEndpoint = 'https://formsubmit.co/ajax/e5ffb739d1a9f40927ae47856cd6e8d4';
 
   const toast = document.getElementById('toast');
   const defaultToastText = toast.textContent;
@@ -2081,6 +2081,16 @@ function handleSubmit(e) {
     return response.json();
   })
   .then(data => {
+    // A 2xx status alone doesn't mean the message was delivered: FormSubmit
+    // can return HTTP 200 with a JSON body reporting failure (for example
+    // { success: "false", message: "This form needs Activation..." }), so
+    // the body's own success flag has to be checked too. Anything that
+    // isn't success === true or success === "true" — including a body
+    // that isn't valid JSON, which makes response.json() above reject and
+    // land here via .catch() — is treated as a failed delivery.
+    if (data.success !== true && data.success !== 'true') {
+      throw new Error('FormSubmit did not report success: ' + JSON.stringify(data));
+    }
     window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "generate_lead", form: "contact" });
     toast.textContent = defaultToastText;
     toast.classList.add('show');
