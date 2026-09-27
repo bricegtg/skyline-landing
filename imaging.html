@@ -182,6 +182,7 @@ body {
 }
 
 img { max-width: 100%; display: block; }
+picture { display: contents; }
 a { color: inherit; text-decoration: none; }
 
 .container {
@@ -1595,7 +1596,7 @@ h1, h2, h3, h4, h5, h6 {
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="/" class="nav-brand">
-      <img src="logo-light.png" alt="Skyline Drones logo" width="44" height="44">
+      <img src="logo-light.png" alt="Skyline Drones logo" width="44" height="44" decoding="async">
       <div class="nav-brand-text">
         <span class="nav-brand-name">Skyline Drones</span>
         <span class="nav-brand-tagline">Aerial Imaging & Inspection Division</span>
@@ -1625,7 +1626,10 @@ h1, h2, h3, h4, h5, h6 {
 <!-- ==================== 2. HERO ==================== -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img fetchpriority="high" src="imaging-realestate.jpg" alt="Aerial drone view of a Philippine property at golden hour">
+    <picture>
+    <source type="image/webp" srcset="imaging-realestate.webp">
+    <img fetchpriority="high" src="imaging-realestate.jpg" width="1536" height="1024" decoding="async" alt="Aerial drone view of a Philippine property at golden hour">
+    </picture>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1722,42 +1726,60 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     <div class="scenarios-grid">
       <div class="scenario-tile fade-in">
-        <img src="imaging-realestate.jpg" alt="Aerial real estate photography of a Philippine property">
+        <picture>
+        <source type="image/webp" srcset="imaging-realestate-thumb.webp">
+        <img src="imaging-realestate-thumb.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Aerial real estate photography of a Philippine property">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">01</div>
           <h4>Real Estate Aerials</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-1">
-        <img src="imaging-construction.jpg" alt="Aerial construction site progress documentation">
+        <picture>
+        <source type="image/webp" srcset="imaging-construction.webp">
+        <img src="imaging-construction.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Aerial construction site progress documentation">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">02</div>
           <h4>Construction Progress</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-2">
-        <img src="imaging-cinematic.jpg" alt="Cinematic aerial brand film capture">
+        <picture>
+        <source type="image/webp" srcset="imaging-cinematic-thumb.webp">
+        <img src="imaging-cinematic-thumb.jpg" width="900" height="530" loading="lazy" decoding="async" alt="Cinematic aerial brand film capture">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">03</div>
           <h4>Brand &amp; Marketing Films</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-3">
-        <img src="imaging-inspection.jpg" alt="Drone roof and facade inspection close-up">
+        <picture>
+        <source type="image/webp" srcset="imaging-inspection.webp">
+        <img src="imaging-inspection.jpg" width="900" height="599" loading="lazy" decoding="async" alt="Drone roof and facade inspection close-up">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">04</div>
           <h4>Roof &amp; Facade Inspection</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in">
-        <img src="imaging-event.jpg" alt="Aerial coverage of an event venue">
+        <picture>
+        <source type="image/webp" srcset="imaging-event.webp">
+        <img src="imaging-event.jpg" width="900" height="474" loading="lazy" decoding="async" alt="Aerial coverage of an event venue">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">05</div>
           <h4>Events &amp; Venues</h4>
         </div>
       </div>
       <div class="scenario-tile fade-in fade-in-delay-1">
-        <img src="imaging-equipment.jpg" alt="Broadcast-grade drone imaging equipment">
+        <picture>
+        <source type="image/webp" srcset="imaging-equipment.webp">
+        <img src="imaging-equipment.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Broadcast-grade drone imaging equipment">
+        </picture>
         <div class="scenario-meta">
           <div class="scenario-meta-tag">06</div>
           <h4>Cinematic Reels</h4>
@@ -2133,7 +2155,7 @@ h1, h2, h3, h4, h5, h6 {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="logo-light.png" alt="Skyline Drones">
+        <img src="logo-light.png" alt="Skyline Drones" width="48" height="48" loading="lazy" decoding="async">
         <div class="footer-brand-name">Skyline Drones</div>
         <p>Aerial Imaging & Inspection Division — remotely piloted aerial imaging for the Philippines. Capture. Inspect. Deliver.</p>
       </div>
@@ -2232,27 +2254,37 @@ function handleSubmit(e) {
   // the static JS can't harvest the address directly.
   const formsubmitEndpoint = 'https://formsubmit.co/ajax/' + ['contact', 'skylinedronesph.com'].join('@');
 
+  const toast = document.getElementById('toast');
+  const defaultToastText = toast.textContent;
+
   fetch(formsubmitEndpoint, {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: formData
   })
-  .then(response => response.json())
+  .then(response => {
+    // FormSubmit (like most APIs) can return a non-2xx response without
+    // fetch() itself rejecting, so success must be confirmed explicitly
+    // instead of assuming the request worked once it resolves.
+    if (!response.ok) {
+      throw new Error('FormSubmit responded with HTTP ' + response.status);
+    }
+    return response.json();
+  })
   .then(data => {
     window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "generate_lead", form: "contact" });
-    const toast = document.getElementById('toast');
+    toast.textContent = defaultToastText;
     toast.classList.add('show');
     form.reset();
     setTimeout(() => toast.classList.remove('show'), 4000);
   })
   .catch(error => {
-    const toast = document.getElementById('toast');
-    toast.textContent = 'Something went wrong. Please try WhatsApp or email us directly.';
+    toast.textContent = "Sorry, that didn't go through. Please email contact@skylinedronesph.com or call +63 952 398 1373.";
     toast.classList.add('show');
     setTimeout(() => {
-      toast.textContent = 'Briefing request received. Our team will be in touch.';
       toast.classList.remove('show');
-    }, 4000);
+      setTimeout(() => { toast.textContent = defaultToastText; }, 500);
+    }, 7000);
   })
   .finally(() => {
     btn.textContent = originalText;
