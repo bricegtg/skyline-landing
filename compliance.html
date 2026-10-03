@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -514,6 +514,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 24px;
   text-align: center;
   border-right: 1px solid var(--card-border);
+  min-width: 0;
 }
 
 .stat-item:last-child { border-right: none; }
@@ -1522,6 +1523,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(4) { border-right: none; }
+  .stat-item:nth-child(5) { grid-column: 1 / -1; border-right: none; }
   .who-grid { grid-template-columns: 1fr; gap: 40px; }
   .building-grid { grid-template-columns: 1fr 1fr; }
   .problem-grid { grid-template-columns: 1fr; }
@@ -1742,14 +1745,18 @@ h1, h2, h3, h4, h5, h6 {
       <div class="stat-label">Registered corporation</div>
     </div>
     <div class="stat-item fade-in fade-in-delay-1">
+      <div class="stat-number">PhilGEPS Registered</div>
+      <div class="stat-label">Government procurement</div>
+    </div>
+    <div class="stat-item fade-in fade-in-delay-2">
       <div class="stat-number">Every job</div>
       <div class="stat-label">Flight permit &amp; risk assessment</div>
     </div>
-    <div class="stat-item fade-in fade-in-delay-2">
+    <div class="stat-item fade-in fade-in-delay-3">
       <div class="stat-number">Every site</div>
       <div class="stat-label">Ground safety perimeter</div>
     </div>
-    <div class="stat-item fade-in fade-in-delay-3">
+    <div class="stat-item fade-in fade-in-delay-4">
       <div class="stat-number">Every flight</div>
       <div class="stat-label">Logged and reported</div>
     </div>
@@ -1765,7 +1772,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     <div class="who-grid">
       <div class="who-description fade-in fade-in-delay-1">
-        <p>Skyline Drones operates as <strong>Skyline Drones OPC</strong>, a one-person corporation registered with the Philippine Securities and Exchange Commission, based in Metro Manila. Facade cleaning, aerial firefighting, and aerial imaging and inspection are divisions of the same company, flown by the same pilot crew, under the same documentation standard.</p>
+        <p>Skyline Drones operates as <strong>Skyline Drones OPC</strong>, a one-person corporation registered with the Philippine Securities and Exchange Commission and PhilGEPS Registered, based in Metro Manila. Facade cleaning, aerial firefighting, and aerial imaging and inspection are divisions of the same company, flown by the same pilot crew, under the same documentation standard.</p>
         <p>That matters for procurement. You contract one accountable entity and get the same flight log and completion report whether the job is a 50-story facade, a fire-response standby, or a construction progress survey.</p>
         <p>SEC registration copies and our operations manual summary are available on request before you book. Ask for them at the contact section below.</p>
       </div>
