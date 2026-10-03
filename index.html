@@ -226,6 +226,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a.nav-firefighting:hover { color: #FF6B5A; }
 .nav-links a.nav-imaging { color: var(--azure); }
 .nav-links a.nav-imaging:hover { color: var(--azure-light); }
+.nav-links a.nav-landscaping { color: #6FBF53; }
+.nav-links a.nav-landscaping:hover { color: #8ED473; }
 .nav-links a.nav-cleaning { color: var(--gold); }
 .nav-links a.nav-cleaning:hover { color: #F5C969; }
 
@@ -310,6 +312,8 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu a.nav-firefighting:hover { color: #FF6B5A; }
 .mobile-menu a.nav-imaging { color: var(--azure); }
 .mobile-menu a.nav-imaging:hover { color: var(--azure-light); }
+.mobile-menu a.nav-landscaping { color: #6FBF53; }
+.mobile-menu a.nav-landscaping:hover { color: #8ED473; }
 
 /* Active page: left-bar accent only — same row geometry as the rest */
 .mobile-menu a.nav-active {
@@ -1453,12 +1457,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 24px rgba(232, 184, 75, 0.25);
 }
 
-/* Three-vertical card grid */
+/* Four-vertical card grid */
 .verticals { padding: 100px 0; }
 .verticals-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   margin-top: 56px;
 }
 .vertical-card {
@@ -1516,6 +1520,7 @@ h1, h2, h3, h4, h5, h6 {
 .vertical-card.accent-gold .vertical-body { border-top-color: var(--gold); }
 .vertical-card.accent-ember .vertical-body { border-top-color: var(--ember); }
 .vertical-card.accent-azure .vertical-body { border-top-color: var(--azure); }
+.vertical-card.accent-moss .vertical-body { border-top-color: #6FBF53; }
 .vertical-body h3 {
   font-size: 20px;
   color: var(--white);
@@ -1526,6 +1531,7 @@ h1, h2, h3, h4, h5, h6 {
 .vertical-card.accent-gold .vertical-body h3 { color: var(--gold); }
 .vertical-card.accent-ember .vertical-body h3 { color: var(--ember-bright); }
 .vertical-card.accent-azure .vertical-body h3 { color: var(--azure-light); }
+.vertical-card.accent-moss .vertical-body h3 { color: #6FBF53; }
 .vertical-body p {
   color: var(--text-muted);
   font-size: 14px;
@@ -1535,7 +1541,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Outline accent buttons */
-.btn-outline-gold, .btn-outline-ember, .btn-outline-azure {
+.btn-outline-gold, .btn-outline-ember, .btn-outline-azure, .btn-outline-moss {
   display: inline-block;
   align-self: flex-start;
   padding: 11px 24px;
@@ -1555,6 +1561,8 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-ember:hover { background: var(--ember); color: var(--white); transform: translateY(-2px); }
 .btn-outline-azure { color: var(--azure-light); border-color: var(--azure); }
 .btn-outline-azure:hover { background: var(--azure); color: var(--white); transform: translateY(-2px); }
+.btn-outline-moss { color: #6FBF53; border-color: #6FBF53; }
+.btn-outline-moss:hover { background: #6FBF53; color: var(--black); transform: translateY(-2px); }
 
 /* Pillar accent override for gold on this page */
 .pillar-card:hover { border-color: rgba(232, 184, 75, 0.35); }
@@ -1615,8 +1623,11 @@ h1, h2, h3, h4, h5, h6 {
 .steps { grid-template-columns: repeat(4, 1fr); }
 
 @media (max-width: 960px) {
-  .verticals-grid { grid-template-columns: 1fr; }
+  .verticals-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .verticals-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -1835,6 +1846,16 @@ h1, h2, h3, h4, h5, h6 {
       "areaServed": {"@type": "Country", "name": "Philippines"},
       "description": "Real estate, construction progress, brand films, roof and facade inspection, events, and cinematic aerial reels. Broadcast-grade payloads.",
       "url": "https://skylinedronesph.com/imaging.html"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://skylinedronesph.com/#service-landscaping",
+      "name": "Robotic Mowing Service",
+      "serviceType": "Remote-control mowing",
+      "provider": {"@id": "https://skylinedronesph.com/#org"},
+      "areaServed": {"@type": "Country", "name": "Philippines"},
+      "description": "Remote-control mowing of embankments, slopes, vacant lots, large lawns, roadside verges, estates and golf roughs using the tracked SH-550B robotic mower. The SH-550B is also available to buy.",
+      "url": "https://skylinedronesph.com/landscaping.html"
     }
   ]
 }
@@ -1857,6 +1878,7 @@ h1, h2, h3, h4, h5, h6 {
       <li><a href="/cleaning.html" class="nav-cleaning">Cleaning</a></li>
       <li><a href="/firefighting.html" class="nav-firefighting">Firefighting</a></li>
       <li><a href="/imaging.html" class="nav-imaging">Aerial Imaging & Inspection</a></li>
+      <li><a href="/landscaping.html" class="nav-landscaping">Landscaping</a></li>
       <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1870,6 +1892,7 @@ h1, h2, h3, h4, h5, h6 {
   <a href="/cleaning.html" class="nav-cleaning" onclick="closeMobile()">Cleaning</a>
   <a href="/firefighting.html" class="nav-firefighting" onclick="closeMobile()">Firefighting</a>
   <a href="/imaging.html" class="nav-imaging" onclick="closeMobile()">Aerial Imaging & Inspection</a>
+  <a href="/landscaping.html" class="nav-landscaping" onclick="closeMobile()">Landscaping</a>
   <a href="#contact" class="nav-cta" onclick="closeMobile()">Contact Us</a>
 </div>
 
@@ -1977,6 +2000,20 @@ h1, h2, h3, h4, h5, h6 {
           <h3>Aerial Imaging & Inspection</h3>
           <p>Real estate aerials, construction progress, brand films, roof & facade inspection, events, and cinematic reels. The same pilot crew, broadcast-grade output.</p>
           <a href="/imaging.html" class="btn-outline-azure">Drone Inspection &amp; Aerial Photography &rarr;</a>
+        </div>
+      </div>
+      <div class="vertical-card accent-moss fade-in fade-in-delay-3">
+        <div class="vertical-media">
+          <picture>
+          <source type="image/avif" srcset="landscaping-sh550b-720.avif">
+          <source type="image/webp" srcset="landscaping-sh550b-720.webp">
+          <img src="landscaping-sh550b-720.jpg" width="900" height="600" loading="lazy" decoding="async" alt="SH-550B remote-control mower on concrete" onerror="this.style.opacity=0">
+          </picture>
+        </div>
+        <div class="vertical-body">
+          <h3>Landscaping</h3>
+          <p>Remote-control mowing for slopes and tall grass — service or buy the SH-550B.</p>
+          <a href="/landscaping.html" class="btn-outline-moss">Robotic Mowing &rarr;</a>
         </div>
       </div>
     </div>
@@ -2277,6 +2314,7 @@ h1, h2, h3, h4, h5, h6 {
         <a href="/cleaning.html">Facade Cleaning</a>
         <a href="/firefighting.html">Firefighting RPAS</a>
         <a href="/imaging.html">Aerial Imaging & Inspection</a>
+        <a href="/landscaping.html">Landscaping</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
